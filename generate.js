@@ -504,7 +504,7 @@ footer{background:var(--navy);padding:40px 5% 24px;margin-top:80px}
       <div class="quote-card-title">Get a Free Quote</div>
       <p class="quote-card-sub">We respond within 24 hours with clear pricing.</p>
       <div id="formContent">
-        <form id="quoteForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" onsubmit="submitForm(event)">
+        <form id="quoteForm" action="https://formspree.io/f/maqkaryk" method="POST" onsubmit="submitForm(event)">
           <input type="hidden" name="_subject" value="Quote Request — ${service.name} ${area.name}"/>
           <input type="hidden" name="service" value="${service.name}"/>
           <input type="hidden" name="area" value="${area.name}"/>
