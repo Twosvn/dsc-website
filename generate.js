@@ -6,7 +6,7 @@ const path = require('path');
 
 const BRAND = {
     name: 'DS Cleaners',
-    phone: '+44 XXXX XXXXXX',
+    phone: '+44 7765 875615',
     email: 'info@dscleaners.com',
     domain: 'https://www.dscleaners.com',
     founded: '2009',
@@ -513,7 +513,7 @@ footer{background:var(--navy);padding:40px 5% 24px;margin-top:80px}
             <div class="f-g"><label>Last Name <em>*</em></label><input type="text" name="last_name" placeholder="Smith" required/></div>
           </div>
           <div class="f-g"><label>Email <em>*</em></label><input type="email" name="email" placeholder="john@email.com" required/></div>
-          <div class="f-g"><label>Phone</label><input type="tel" name="phone" placeholder="+44 XXXX XXXXXX"/></div>
+          <div class="f-g"><label>Phone</label><input type="tel" name="phone" placeholder="+44 7765 875615"/></div>
           <div class="f-g"><label>Postcode <em>*</em></label><input type="text" name="postcode" placeholder="e.g. SW11 4NG" required/></div>
           <div class="f-g"><label>Message</label><textarea name="message" placeholder="Property size, preferred dates, any special requirements..."></textarea></div>
           <input type="text" name="_gotcha" style="display:none"/>
@@ -552,6 +552,15 @@ footer{background:var(--navy);padding:40px 5% 24px;margin-top:80px}
         <a href="${BRAND.domain}/landing/cleaning-services-south-east-london.html">South East London</a>
         <a href="${BRAND.domain}/landing/cleaning-services-london.html">London</a>
         <a href="${BRAND.domain}">DS Cleaners Home</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <h4>Blog &amp; Guides</h4>
+        <a href="${BRAND.domain}/blog/end-of-tenancy-cleaning-checklist-london.html">End of Tenancy Checklist</a>
+        <a href="${BRAND.domain}/blog/deep-clean-vs-regular-clean.html">Deep Clean vs Regular Clean</a>
+        <a href="${BRAND.domain}/blog/how-to-get-your-deposit-back-end-of-tenancy.html">Get Your Deposit Back</a>
+        <a href="${BRAND.domain}/blog/">All Guides</a>
       </div>
     </div>
     <div>
@@ -619,3 +628,850 @@ for (const service of SERVICES) {
 }
 
 console.log(`\n✅ Generated ${count} landing pages`);
+
+// ─────────────────────────────────────────────
+// BLOG GENERATOR
+// ─────────────────────────────────────────────
+
+const BLOG_POSTS = [
+    {
+        slug: 'end-of-tenancy-cleaning-checklist-london',
+        title: 'End of Tenancy Cleaning Checklist London (2025) — Room by Room',
+        metaTitle: 'End of Tenancy Cleaning Checklist London 2025 | DS Cleaners',
+        metaDesc: 'A complete room-by-room end of tenancy cleaning checklist for London renters. Use it yourself or know exactly what to expect from a professional clean.',
+        datePublished: '2025-01-15',
+        category: 'End of Tenancy',
+        readMins: 7,
+        relatedServiceSlug: 'end-of-tenancy-cleaning',
+        relatedServiceArea: 'london',
+        intro: 'Deposits get withheld for one reason more than any other: cleaning. According to the Tenancy Deposit Scheme, cleaning disputes account for over 50% of all deposit deductions in England. In London, where rents — and therefore deposits — are among the highest in the country, getting this wrong is expensive. This checklist covers every room a letting agent will inspect. Use it to clean yourself or to verify a professional job.',
+        sections: [
+            {
+                h2: 'Why Letting Agents Inspect So Thoroughly',
+                body: 'Your tenancy agreement almost certainly includes a clause requiring you to return the property in the same condition it was handed over — fair wear and tear excepted. Letting agents use a check-out report that compares the property\'s current state against the check-in inventory, often with photographs. The standard is professional-grade: not "clean enough to live in" but "clean enough to relet immediately." That distinction matters.',
+            },
+            {
+                h2: 'Kitchen Checklist',
+                body: 'The kitchen is the most scrutinised room. Agents specifically check inside ovens, under hobs, and behind appliances — areas most tenants miss.',
+                list: [
+                    'Oven interior: degrease racks, cavity, glass door, and door seal',
+                    'Hob: remove and clean burner caps and drip trays',
+                    'Extractor fan: clean filters and outer housing',
+                    'Fridge/freezer: defrost, wipe interior shelves and drawers, clean seals',
+                    'Dishwasher: clean filter, wipe door seals, run empty cycle with cleaner',
+                    'All cupboards: inside, outside, and door fronts (including hinges)',
+                    'Sink and taps: descale, polish, clean around sealant edges',
+                    'Walls and splashback: degrease any cooking splatter',
+                    'Behind and underneath appliances if accessible',
+                ],
+            },
+            {
+                h2: 'Bathroom and Wet Room Checklist',
+                body: 'Hard water in London means limescale builds up fast. Grout, shower heads, and taps must be descaled, not just wiped.',
+                list: [
+                    'Shower: descale head, clean screen or curtain, scrub tray and waste drain',
+                    'Bath: remove limescale, clean taps, polish chrome',
+                    'WC: inside the bowl (including under the rim), cistern top, seat and hinges',
+                    'Sink: descale and polish basin and taps, clean pedestal',
+                    'Tiles and grout: scrub with appropriate cleaner',
+                    'Mirror: streak-free clean',
+                    'Extractor fan: wipe grille',
+                    'Sealant lines: remove any mould or mildew',
+                ],
+            },
+            {
+                h2: 'Bedrooms and Living Areas',
+                body: 'These rooms look simpler but the details catch people out — especially window tracks and behind radiators.',
+                list: [
+                    'Carpets: professional hot-water extraction or equivalent deep clean',
+                    'Hard floors: mop and remove any scuff marks',
+                    'Skirting boards: wipe entire length including corners',
+                    'Window sills, frames, and tracks (inside)',
+                    'Light switches and plug sockets: wipe clean',
+                    'Doors and door frames: remove fingerprints and scuffs',
+                    'Wardrobe and storage interiors: wipe shelves, vacuum base',
+                    'Radiators: clean between fins and top surface',
+                    'Mirrors and glass: streak-free',
+                    'Light fittings and shades: dust and wipe',
+                ],
+            },
+            {
+                h2: 'Hallway, Stairs, and Communal Areas',
+                body: 'Often overlooked in the rush to clean individual rooms, these areas are among the first things seen on check-out.',
+                list: [
+                    'Staircase: hoover each step, wipe balustrades',
+                    'Front door and letterbox: clean inside face and handles',
+                    'Any storage cupboards: clear out and wipe down',
+                    'Loft hatch or meter cupboard if applicable: dust and accessible surfaces clean',
+                ],
+            },
+            {
+                h2: 'Professional Clean vs DIY',
+                body: 'A professional end of tenancy clean typically takes 4–8 hours for a 1–3 bed property and follows the same checklist above, documented with a dated invoice. Most letting agencies accept this as proof of professional cleaning, which removes their ability to charge for cleaning from your deposit. For a standard 1-bed flat in London, expect to pay £108–£135 for a professional clean. Compare that to a deposit deduction, which agents typically calculate at full cleaning costs plus admin — often £200–£400. The maths usually favour booking a professional.',
+            },
+        ],
+        cta: {
+            heading: 'Need a Professional End of Tenancy Clean?',
+            body: 'DS Cleaners covers all areas of London. We clean to full agency checklist standard and provide a dated invoice. Response within 24 hours.',
+            label: 'Get a Free Quote',
+        },
+    },
+    {
+        slug: 'deep-clean-vs-regular-clean',
+        title: 'Deep Cleaning vs Regular Cleaning: What\'s the Difference?',
+        metaTitle: 'Deep Cleaning vs Regular Cleaning: What\'s the Difference? | DS Cleaners',
+        metaDesc: 'Understand exactly what separates a deep clean from a regular clean — and when you actually need each. Clear breakdown of scope, time, and cost.',
+        datePublished: '2025-02-03',
+        category: 'Deep Cleaning',
+        readMins: 5,
+        relatedServiceSlug: 'deep-cleaning',
+        relatedServiceArea: 'london',
+        intro: 'Both terms appear on cleaning company websites, but the distinction matters practically — especially when you\'re deciding what to book and what to budget. The short answer: a regular clean maintains your home week to week; a deep clean resets it. Here\'s exactly what each involves.',
+        sections: [
+            {
+                h2: 'What a Regular Clean Covers',
+                body: 'A regular domestic clean typically runs 2–3 hours for a standard home. It maintains visible cleanliness and removes everyday build-up. Think: surfaces wiped, floors hoovered and mopped, bathrooms and kitchen cleaned to a hygienic standard, beds changed if requested.',
+                list: [
+                    'Kitchen surfaces, hob top, and sink',
+                    'Bathroom and WC — surfaces and fixtures',
+                    'Hoovering all floors and mopping hard floors',
+                    'Dusting accessible surfaces',
+                    'Emptying bins',
+                    'Tidying to enable cleaning (where agreed)',
+                ],
+            },
+            {
+                h2: 'What a Deep Clean Adds',
+                body: 'A deep clean goes into every area a regular clean skips. Minimum 4 hours, often 6–8 for larger or heavily soiled properties. It\'s not just more of the same — it\'s a fundamentally different scope.',
+                list: [
+                    'Oven interior: cavity, racks, glass, seals — full degreasing',
+                    'Inside all cupboards and drawers',
+                    'Behind and underneath appliances',
+                    'Tile grout scrubbing',
+                    'Limescale removal from shower screens, taps, and showerheads',
+                    'Skirting boards and window tracks',
+                    'Light fittings and ceiling fans',
+                    'Walls and door frames (removing scuffs and marks)',
+                    'Behind radiators',
+                ],
+            },
+            {
+                h2: 'When to Book a Regular Clean',
+                body: 'Regular cleans are for maintenance — keeping your home in a clean, liveable state without effort on your part. Most clients book weekly or fortnightly. The right frequency depends on the number of people in the property, whether you have pets, and your personal standard. For most London households, a fortnightly regular clean is the most popular option.',
+            },
+            {
+                h2: 'When to Book a Deep Clean',
+                body: 'A deep clean makes sense at key transition points or when a regular clean can no longer keep up with accumulated build-up. Common triggers include: moving into a new property (regardless of what the previous occupants claimed to have done), after renovation work, after a period when regular cleaning was skipped for several months, end of tenancy handover, or a seasonal reset — many clients book once or twice a year. If your regular cleaner is spending most of their time on catch-up work, it\'s a sign the property needs a deep clean first.',
+            },
+            {
+                h2: 'Cost Comparison',
+                body: 'Regular cleaning at DS Cleaners starts from £21/hr with a 2-hour minimum, so a typical session runs £42–£84. A deep clean starts from £27/hr with a 4-hour minimum — a standard flat runs £108–£162. The higher rate reflects the intensive nature of the work and the specialist products used. Many clients do a deep clean first, then maintain with regular fortnightly cleans — often the most cost-effective approach over time.',
+            },
+        ],
+        cta: {
+            heading: 'Not Sure Which Clean You Need?',
+            body: 'Tell us about your property and we\'ll recommend the right service. Free quote, no obligation, reply within 24 hours.',
+            label: 'Get a Free Quote',
+        },
+    },
+    {
+        slug: 'how-often-should-you-deep-clean-your-home',
+        title: 'How Often Should You Deep Clean Your Home?',
+        metaTitle: 'How Often Should You Deep Clean Your Home? | DS Cleaners',
+        metaDesc: 'General guidelines, room-by-room frequencies, and clear signs your home is overdue a deep clean. Practical advice from 15+ years of professional cleaning.',
+        datePublished: '2025-02-20',
+        category: 'Deep Cleaning',
+        readMins: 5,
+        relatedServiceSlug: 'deep-cleaning',
+        relatedServiceArea: 'london',
+        intro: 'There\'s no universal answer — the right frequency depends on your household size, lifestyle, and what you consider an acceptable baseline. But there are practical guidelines that apply to most homes, and clear signs that tell you when you\'ve left it too long.',
+        sections: [
+            {
+                h2: 'The General Rule',
+                body: 'For most households, a full deep clean once or twice a year is the standard recommendation. This assumes regular cleaning in between. The logic: a regular clean maintains surface-level hygiene, but grease, limescale, mould, and dust accumulate in areas a weekly cleaner doesn\'t reach — inside ovens, behind appliances, grout lines, and so on. Left unchecked, this build-up becomes harder to remove and can affect air quality, appliance lifespan, and the overall condition of the property.',
+            },
+            {
+                h2: 'By Room: How Often Each Area Needs a Deep Clean',
+                body: '',
+                list: [
+                    'Kitchen oven and hob: every 3–4 months if used frequently; every 6 months if lighter use',
+                    'Kitchen cupboards and inside fridge: twice a year',
+                    'Bathroom grout and limescale: every 3 months in hard-water areas like London',
+                    'Shower head descaling: every 2–3 months (limescale reduces pressure and harbours bacteria)',
+                    'Behind and under furniture: twice a year',
+                    'Mattresses (vacuuming and sanitising): every 6 months',
+                    'Windows and window tracks (inside): twice a year',
+                    'Extractor fans: every 6 months',
+                ],
+            },
+            {
+                h2: 'London Homes: Why More Often Is Often Right',
+                body: 'London\'s hard water accelerates limescale build-up in bathrooms and kitchens significantly compared to softer-water regions. Air pollution also means that dust and particulates settle faster, particularly in homes near busy roads. For most London properties, a deep clean every 4–6 months rather than every 12 is a more realistic maintenance schedule — especially for bathrooms and kitchens.',
+            },
+            {
+                h2: 'Clear Signs You\'re Overdue',
+                body: 'Your home is telling you it needs a deep clean when:',
+                list: [
+                    'The oven smokes or smells during use',
+                    'Grout lines are grey, brown, or black',
+                    'Shower pressure has dropped noticeably',
+                    'There\'s a persistent smell in the kitchen despite regular cleaning',
+                    'Dust reappears on surfaces within a day or two of a regular clean',
+                    'Skirting boards and window frames feel grimy to the touch',
+                    'The extractor fan sounds louder than usual',
+                ],
+            },
+            {
+                h2: 'How to Make It Last Longer',
+                body: 'A professional deep clean followed by consistent regular maintenance is the most efficient approach. Once the baseline is reset, a fortnightly regular clean keeps build-up from accumulating — meaning the next deep clean is easier, faster, and cheaper. Many DS Cleaners clients combine an initial deep clean with an ongoing domestic cleaning schedule for exactly this reason.',
+            },
+        ],
+        cta: {
+            heading: 'Ready to Reset Your Home?',
+            body: 'We cover all areas of London. Deep cleans from £27/hr with a 4-hour minimum. Free quote within 24 hours.',
+            label: 'Book a Deep Clean',
+        },
+    },
+    {
+        slug: 'how-to-prepare-for-a-professional-clean',
+        title: 'How to Prepare for a Professional Clean: 7 Simple Steps',
+        metaTitle: 'How to Prepare for a Professional Clean | DS Cleaners',
+        metaDesc: 'Make the most of your professional cleaning appointment with these 7 practical preparation steps. What to do, what not to do, and what to expect.',
+        datePublished: '2025-03-05',
+        category: 'Domestic Cleaning',
+        readMins: 4,
+        relatedServiceSlug: 'domestic-cleaning',
+        relatedServiceArea: 'london',
+        intro: 'A professional clean achieves its best results when your cleaner can focus on actual cleaning — not working around clutter or hunting for the bin bags. A few minutes of preparation the morning of your appointment makes a real difference to the outcome. Here\'s exactly what to do.',
+        sections: [
+            {
+                h2: '1. Tidy Before They Arrive — Not Deep Clean, Just Tidy',
+                body: 'Your cleaner is not there to sort through your belongings. Clearing surfaces, picking up clothes from floors, and returning items to their normal places takes you 10–15 minutes but saves your cleaner significant time — time they can instead spend on actual deep cleaning. You don\'t need to clean anything yourself; just create a clear work surface.',
+            },
+            {
+                h2: '2. Secure or Move Valuables and Fragile Items',
+                body: 'Move anything fragile or irreplaceable off open surfaces before the clean. This isn\'t a reflection of trust — it\'s simply good practice that removes risk for both parties. Jewellery, documents, and items with significant sentimental value are better stored away during any cleaning appointment.',
+            },
+            {
+                h2: '3. Communicate Your Priorities',
+                body: 'Every home is different. Tell your cleaner which areas need extra attention this visit — the bathroom grout, a kitchen appliance that\'s been neglected, or a specific room that\'s due more focus. Clear priorities mean your most important areas get the best attention, rather than even time spread across everything.',
+            },
+            {
+                h2: '4. Let Your Cleaner Know What Products Are in the House',
+                body: 'DS Cleaners brings their own professional-grade, eco-friendly products for every appointment. But if you have particular surfaces that require specific care — marble worktops, unsealed stone, certain wood finishes — mention this. We\'ll bring the right products and avoid anything that could damage a delicate surface.',
+            },
+            {
+                h2: '5. Provide Access to What\'s Needed',
+                body: 'Make sure your cleaner has access to a working hoover, mop and bucket (we bring products but not equipment unless agreed in advance), and knows where to find bin bags, extra cloths, or specific items you\'d like them to use. A quick orientation on your first appointment is time well spent.',
+            },
+            {
+                h2: '6. You Don\'t Need to Be Home',
+                body: 'Many clients provide a key or access code and are out for the duration of the clean. This is perfectly normal and often produces better results — your cleaner can work uninterrupted and focus entirely on the job. All DS Cleaners staff are vetted, reference-checked, and trusted with solo access routinely.',
+            },
+            {
+                h2: '7. Give Feedback After the First Clean',
+                body: 'The first appointment is always the most important for getting the relationship right. If anything wasn\'t done to your standard, or if you\'d like priorities adjusted, say so clearly and promptly. A good cleaning team wants to know — it means every subsequent visit gets closer to exactly what you want.',
+            },
+        ],
+        cta: {
+            heading: 'Book Your First Professional Clean',
+            body: 'Domestic cleaning from £21/hr. Fortnightly and weekly schedules available across London. Free quote in 24 hours.',
+            label: 'Get a Free Quote',
+        },
+    },
+    {
+        slug: 'how-to-get-your-deposit-back-end-of-tenancy',
+        title: 'How to Get Your Full Deposit Back: End of Tenancy Cleaning Guide',
+        metaTitle: 'How to Get Your Full Deposit Back: End of Tenancy Cleaning Guide | DS Cleaners',
+        metaDesc: 'Cleaning is the number one reason deposits are withheld in London. This guide explains exactly what agents look for, and how to make sure you get every penny back.',
+        datePublished: '2025-03-18',
+        category: 'End of Tenancy',
+        readMins: 6,
+        relatedServiceSlug: 'end-of-tenancy-cleaning',
+        relatedServiceArea: 'london',
+        intro: 'If you\'re moving out of a London rental, your deposit — typically 5 weeks\' rent — is at risk if the property isn\'t returned in the right condition. Cleaning is the single most common reason deposits are withheld or partially deducted. This guide explains what the bar actually is, what agents look for, and how to make sure you hit it.',
+        sections: [
+            {
+                h2: 'Why Cleaning Is the #1 Deposit Dispute',
+                body: 'The Tenancy Deposit Scheme reports that cleaning accounts for 56% of all deposit deductions across England and Wales. In London, where average deposits run £2,000–£4,000 or more, even a partial deduction is significant. The reason cleaning causes so many disputes is the difference between "clean enough to live in" and "clean enough to relet immediately" — the standard a landlord or agent applies. You could spend a full day cleaning and still fall short of check-in condition if you miss key areas.',
+            },
+            {
+                h2: 'What Agents Actually Check',
+                body: 'A check-out inspection uses the check-in inventory as a baseline. Agents look specifically at:',
+                list: [
+                    'Oven and extractor fan — almost always flagged if not professionally cleaned',
+                    'Bathroom grout, sealant, and shower screen limescale',
+                    'Inside all kitchen cupboards and drawers',
+                    'Carpets — condition compared to check-in',
+                    'Walls — marks, scuffs, and hand prints at door heights',
+                    'Window frames and sills inside',
+                    'Skirting boards throughout',
+                    'Behind and under furniture (if you\'re taking it)',
+                ],
+            },
+            {
+                h2: 'The Professional Invoice Advantage',
+                body: 'When you book a professional end of tenancy clean, you receive a dated invoice confirming that a professional service was carried out. Most letting agents accept this as satisfying the cleaning clause in your tenancy agreement, which removes their ability to charge you for cleaning from your deposit — even if they have minor quibbles with the result. This is why professional cleaning at £108–£162 for a typical London flat is almost always the better financial decision versus a deposit deduction at full agency rates (often £200–£400 or more).',
+            },
+            {
+                h2: 'Timeline: When to Book',
+                body: 'Book your professional end of tenancy clean for the day before or morning of your check-out. You want the property cleaned last — after all your belongings have left. Don\'t clean and then move furniture out afterwards, as this creates marks and debris you can\'t address. Leave enough time between the clean finishing and your check-out inspection for any quick touch-ups if needed.',
+            },
+            {
+                h2: 'What About the Deposit-Back Guarantee?',
+                body: 'At DS Cleaners, we clean to the full letting agency checklist and stand behind our work. If your agent raises a specific cleaning issue after we\'ve completed the job, we return to address it at no extra charge. We provide a dated invoice for every end of tenancy clean — accepted by all major London letting agencies.',
+            },
+        ],
+        cta: {
+            heading: 'Protect Your Deposit with a Professional Clean',
+            body: 'End of tenancy cleaning from £27/hr. We cover all London areas and provide a full invoice for your agent. Free quote in 24 hours.',
+            label: 'Get a Free Quote',
+        },
+    },
+    {
+        slug: 'office-cleaning-london-guide',
+        title: 'Office Cleaning in London: What Your Business Needs to Know',
+        metaTitle: 'Office Cleaning London: What Your Business Needs to Know | DS Cleaners',
+        metaDesc: 'A straightforward guide to commercial office cleaning in London — frequency, scope, contracts, and questions to ask any potential cleaning company.',
+        datePublished: '2025-04-02',
+        category: 'Commercial Cleaning',
+        readMins: 6,
+        relatedServiceSlug: 'commercial-cleaning',
+        relatedServiceArea: 'london',
+        intro: 'Office cleanliness directly affects staff wellbeing, client perception, and the overall efficiency of your business. Yet many London businesses operate on cleaning contracts that aren\'t well matched to their actual premises and usage. This guide covers the practical considerations: what professional commercial cleaning should include, how to determine the right frequency, and what to look for in a contract.',
+        sections: [
+            {
+                h2: 'Why Office Cleanliness Is a Business Issue',
+                body: 'Research consistently links cleaner office environments to lower sick days, higher staff satisfaction, and better client impressions. In London\'s competitive market, an office that doesn\'t present well — especially to visiting clients — can undermine commercial credibility. Beyond appearance, shared spaces harbour bacteria on high-touch surfaces like door handles, keyboards, and communal kitchen areas. Regular professional cleaning is a basic operational standard, not a luxury.',
+            },
+            {
+                h2: 'What Professional Office Cleaning Should Include',
+                body: 'A standard commercial cleaning contract typically covers:',
+                list: [
+                    'Vacuuming all floors and mats',
+                    'Mopping hard floors',
+                    'Wiping down all desk surfaces, tables, and meeting room furniture',
+                    'Cleaning communal kitchen: surfaces, sink, appliance exteriors, microwave inside',
+                    'Cleaning all bathrooms and WCs to hygienic standard',
+                    'Emptying all bins',
+                    'Wiping down glass partitions and internal windows',
+                    'Dusting accessible surfaces, shelving, and skirting boards',
+                    'Replenishing hand soap and paper towels (if agreed)',
+                ],
+            },
+            {
+                h2: 'How Often Does an Office Need Cleaning?',
+                body: 'The right frequency depends on the size of your team and the nature of your work. As a general guide: small offices (1–10 people) can typically maintain hygiene with 2–3 cleans per week. Medium offices (10–30 people) usually require daily cleaning of kitchens and bathrooms, with full office cleaning 4–5 times per week. Larger offices or high-footfall spaces generally need daily cleaning throughout. If clients visit regularly, the visible standard needs to be consistently high — which usually means daily.',
+            },
+            {
+                h2: 'Out-of-Hours Cleaning',
+                body: 'The majority of DS Cleaners\' commercial clients prefer evening or early-morning cleans — typically 6pm–9pm or 6am–8am. This keeps the office undisturbed during working hours and avoids the disruption of vacuum cleaners and cleaning activity during calls or meetings. We\'re fully flexible around your business hours and can accommodate split shifts where different areas need cleaning at different times.',
+            },
+            {
+                h2: 'Understanding Commercial Cleaning Contracts',
+                body: 'Look for: a rolling monthly contract (no long tie-in), a dedicated account manager as a single point of contact, a named team who gets to know your premises, and a clearly defined scope of work in writing. Avoid contracts that lock you in for 12+ months without a performance review mechanism. At DS Cleaners, we offer rolling monthly contracts because we\'re confident in our service — you stay because the quality is right, not because you\'re locked in.',
+            },
+            {
+                h2: 'Questions to Ask Before You Sign',
+                body: '',
+                list: [
+                    'Who is the named contact if there\'s an issue?',
+                    'Will we have the same cleaning team each visit?',
+                    'How are replacement staff vetted?',
+                    'What products are used — are they safe for our office environment?',
+                    'What is the notice period to end the contract?',
+                    'Do you provide consumables (soap, paper towels) or do we supply them?',
+                ],
+            },
+        ],
+        cta: {
+            heading: 'Get a Commercial Cleaning Quote',
+            body: 'We cover offices, retail, hospitality, and more across London. Rolling monthly contracts, no long tie-in. Free quote tailored to your premises.',
+            label: 'Get a Free Quote',
+        },
+    },
+    {
+        slug: 'spring-cleaning-tips-london',
+        title: 'Spring Cleaning Tips for London Homes (2025)',
+        metaTitle: 'Spring Cleaning Tips for London Homes 2025 | DS Cleaners',
+        metaDesc: 'A practical spring cleaning guide for London flats and houses — where to start, what gets missed, and when it\'s worth calling in professionals.',
+        datePublished: '2025-04-14',
+        category: 'Domestic Cleaning',
+        readMins: 5,
+        relatedServiceSlug: 'domestic-cleaning',
+        relatedServiceArea: 'london',
+        intro: 'Spring cleaning isn\'t just a tradition — it\'s a practical response to what happens in a home over winter. Closed windows, central heating, and less natural light mean that dust, mould, and grease accumulate in ways that aren\'t always visible day to day. A thorough spring reset sets a clean baseline for the rest of the year. Here\'s how to approach it effectively.',
+        sections: [
+            {
+                h2: 'Why London Homes Need Extra Attention',
+                body: 'London homes face specific challenges that make spring cleaning more important than elsewhere. Hard water means limescale builds up significantly over winter, particularly on shower heads, taps, and kettle elements. Urban air pollution settles as a fine layer of grime on window sills, blinds, and soft furnishings. And smaller average property sizes mean that clutter and dust accumulate in corners and under furniture faster than in larger homes.',
+            },
+            {
+                h2: 'Start with Decluttering, Not Cleaning',
+                body: 'Cleaning around clutter is inefficient. Before you pick up a cloth, go through each room and remove anything that shouldn\'t be there — items to donate, things that belong in a different room, and anything you haven\'t used in 12 months. A decluttered space is faster to clean and feels markedly different once done. One useful rule: one bag or box per room, to keep the process contained and manageable.',
+            },
+            {
+                h2: 'Room-by-Room Priorities',
+                body: 'Focus your spring clean effort where winter build-up is worst:',
+                list: [
+                    'Kitchen: oven interior (winter use = maximum grease build-up), extractor fan filter, inside cupboards, behind the fridge',
+                    'Bathroom: descale shower head and taps, scrub grout, clean behind the toilet and under the sink',
+                    'Living room: clean behind and under sofas and furniture, dust blinds and curtain rails, wipe skirting boards',
+                    'Bedrooms: rotate or flip mattresses, clean under the bed, wipe down all furniture including tops of wardrobes',
+                    'Windows: clean frames, tracks, and glass (inside) — spring light reveals every streak',
+                    'Hallway: often the most neglected room; clean the front door, wipe wall switches and sockets, clear any winter clutter',
+                ],
+            },
+            {
+                h2: 'What People Consistently Miss',
+                body: 'The areas that get skipped in a typical spring clean:',
+                list: [
+                    'Top of kitchen cupboards',
+                    'Inside kitchen drawers',
+                    'Behind radiators',
+                    'Light fittings (dust accumulates quickly on shades and bulbs)',
+                    'The inside of the dishwasher',
+                    'Shower curtain or door tracks',
+                    'Bin areas — inside bins, not just emptying them',
+                ],
+            },
+            {
+                h2: 'When to Call in Professionals',
+                body: 'A full spring deep clean on a London flat typically takes 4–6 hours when done thoroughly. If you don\'t have that time, or if the property hasn\'t had a professional deep clean in over a year, booking a one-off deep clean is often the most practical option. Professionals bring the right products for limescale, grease, and grout — areas where DIY cleaning struggles to match commercial-grade results. You can then maintain the baseline with regular cleaning for the rest of the year.',
+            },
+        ],
+        cta: {
+            heading: 'Book a One-Off Spring Deep Clean',
+            body: 'DS Cleaners covers all areas of London. Spring deep cleans from £27/hr with a 4-hour minimum. Free quote within 24 hours.',
+            label: 'Get a Free Quote',
+        },
+    },
+    {
+        slug: 'eco-friendly-cleaning-what-it-means',
+        title: 'Eco-Friendly Cleaning: What It Actually Means',
+        metaTitle: 'Eco-Friendly Cleaning: What It Actually Means | DS Cleaners',
+        metaDesc: 'What eco-friendly professional cleaning products actually are, how they compare to conventional alternatives, and why they matter for your home and health.',
+        datePublished: '2025-05-01',
+        category: 'Domestic Cleaning',
+        readMins: 4,
+        relatedServiceSlug: 'cleaning-services',
+        relatedServiceArea: 'london',
+        intro: '"Eco-friendly" appears on almost every cleaning company\'s website. But what does it actually mean in practice — and does it make a difference to how clean your home gets? Here\'s a straightforward breakdown.',
+        sections: [
+            {
+                h2: 'The Problem with Conventional Cleaning Chemicals',
+                body: 'Many conventional cleaning products contain compounds that are effective at cleaning but problematic in other ways. Phosphates in surface cleaners contribute to water pollution. Volatile organic compounds (VOCs) in aerosol sprays affect indoor air quality — particularly relevant in London flats where ventilation is limited. Chlorine-based bleaches, while effective, leave residues and can cause respiratory irritation with repeated exposure. None of this means they\'re dangerous in occasional use, but in a home that\'s professionally cleaned weekly, the cumulative exposure matters.',
+            },
+            {
+                h2: 'What Eco-Friendly Products Actually Are',
+                body: 'Professional eco-friendly cleaning products are formulated to be:',
+                list: [
+                    'Biodegradable — they break down naturally without leaving persistent compounds in water systems',
+                    'Free from phosphates, chlorine bleach, and synthetic fragrances',
+                    'Plant-derived surfactants rather than petroleum-based ones',
+                    'Low or zero VOC — important for indoor air quality',
+                    'Safe for use around children and pets at normal concentrations',
+                ],
+            },
+            {
+                h2: 'Do They Actually Clean as Well?',
+                body: 'For standard cleaning tasks — surfaces, floors, bathrooms, kitchens — professional-grade eco-friendly products perform equivalently to conventional alternatives. Where they historically lagged was in very heavy-duty applications: serious oven grease, long-established limescale, or mould remediation. Modern formulations have largely closed this gap, and for most residential cleaning applications, there is no practical difference in the result. Where a genuinely difficult job requires a stronger product, a professional will use the appropriate tool — the goal is clean, safe results, not ideology.',
+            },
+            {
+                h2: 'Why It Matters for Your Home Specifically',
+                body: 'For households with children, people with respiratory conditions, or anyone with sensitivities to fragrances and chemical compounds, eco-friendly products are a straightforward preference. Beyond health, surfaces like natural stone, sealed wood, and certain finishes are better maintained with gentler, pH-neutral formulations over time — reducing the need for restoration work. And for anyone conscious of their environmental impact, the cumulative difference of professional-grade, biodegradable products across a year of weekly cleans is meaningful.',
+            },
+            {
+                h2: 'What DS Cleaners Uses',
+                body: 'We use professional-grade, eco-friendly products for all domestic and commercial cleaning. Our range is biodegradable, free from harsh chemicals, and effective across all standard residential surfaces. If you have specific surface requirements or sensitivities, tell us when you book — we\'ll confirm the exact products we\'ll use for your appointment.',
+            },
+        ],
+        cta: {
+            heading: 'Professional Cleaning with Eco-Friendly Products',
+            body: 'Domestic cleaning from £21/hr across London. We bring all products. Free quote within 24 hours.',
+            label: 'Get a Free Quote',
+        },
+    },
+];
+
+function buildBlogPage(post) {
+    const relatedLandingSlug = `${post.relatedServiceSlug}-${post.relatedServiceArea}.html`;
+    const relatedLandingUrl = `${BRAND.domain}/landing/${relatedLandingSlug}`;
+    const pageUrl = `${BRAND.domain}/blog/${post.slug}.html`;
+    const dateFormatted = new Date(post.datePublished).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+
+    const sectionsHtml = post.sections.map(s => {
+        let listHtml = '';
+        if (s.list && s.list.length) {
+            listHtml = `<ul class="blog-list">${s.list.map(item => `<li>${item}</li>`).join('')}</ul>`;
+        }
+        const bodyHtml = s.body ? `<p>${s.body}</p>` : '';
+        return `<h2>${s.h2}</h2>${bodyHtml}${listHtml}`;
+    }).join('\n');
+
+    const relatedPostsHtml = BLOG_POSTS
+        .filter(p => p.slug !== post.slug)
+        .slice(0, 3)
+        .map(p => `
+        <a href="${BRAND.domain}/blog/${p.slug}.html" class="related-card">
+          <div class="related-cat">${p.category}</div>
+          <div class="related-title">${p.title}</div>
+          <div class="related-meta">${p.readMins} min read</div>
+        </a>`).join('');
+
+    return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>${post.metaTitle}</title>
+<meta name="description" content="${post.metaDesc}"/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="${post.metaTitle}"/>
+<meta property="og:description" content="${post.metaDesc}"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="${pageUrl}"/>
+<link rel="canonical" href="${pageUrl}"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "${post.title.replace(/"/g, '\\"')}",
+      "description": "${post.metaDesc.replace(/"/g, '\\"')}",
+      "datePublished": "${post.datePublished}",
+      "author": {
+        "@type": "Organization",
+        "name": "${BRAND.name}",
+        "url": "${BRAND.domain}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "${BRAND.name}",
+        "url": "${BRAND.domain}"
+      },
+      "url": "${pageUrl}",
+      "mainEntityOfPage": "${pageUrl}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Home","item":"${BRAND.domain}"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"${BRAND.domain}/blog/"},
+        {"@type":"ListItem","position":3,"name":"${post.title.replace(/"/g, '\\"')}","item":"${pageUrl}"}
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+<style>
+:root {
+  --navy:#0c1e35;--navy-light:#1a3352;--blue:#1c7ed6;--blue-hover:#1971c2;
+  --blue-pale:#e8f3fd;--blue-paler:#f4f9fe;--white:#fff;
+  --grey-50:#f8f9fa;--grey-100:#f1f3f5;--grey-200:#e9ecef;
+  --grey-300:#dee2e6;--grey-400:#ced4da;--grey-600:#6c757d;
+  --grey-700:#495057;--grey-900:#212529;--green:#2f9e44;
+  --ff:'Plus Jakarta Sans',sans-serif;
+  --radius:10px;--radius-lg:16px;
+  --shadow:0 4px 20px rgba(0,0,0,.09);--shadow-lg:0 12px 48px rgba(0,0,0,.13);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff);color:var(--grey-900);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}ul{list-style:none}
+button{font-family:var(--ff);cursor:pointer}
+
+nav{position:sticky;top:0;z-index:100;height:64px;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--grey-200);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:34px;height:34px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-text{font-size:1.05rem;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+.logo-text span{color:var(--blue)}
+.nav-cta{background:var(--blue);color:var(--white);font-weight:700;font-size:.85rem;padding:9px 20px;border-radius:8px;border:none;transition:background .2s}
+.nav-cta:hover{background:var(--blue-hover)}
+.nav-home{background:none;border:none;font-size:.85rem;font-weight:600;color:var(--grey-700);padding:8px 14px;border-radius:7px;transition:background .2s}
+.nav-home:hover{background:var(--grey-100)}
+
+.blog-hero{background:var(--navy);padding:64px 5% 52px}
+.blog-hero-inner{max-width:760px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:.75rem;color:rgba(255,255,255,.4);margin-bottom:18px}
+.breadcrumb a{color:rgba(255,255,255,.4);transition:color .15s}
+.breadcrumb a:hover{color:rgba(255,255,255,.75)}
+.breadcrumb-sep{color:rgba(255,255,255,.2)}
+.blog-cat-badge{display:inline-block;background:rgba(28,126,214,.3);border:1px solid rgba(28,126,214,.5);color:#60bdff;font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-bottom:16px}
+.blog-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-.025em;margin-bottom:20px}
+.blog-meta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.blog-meta-item{display:flex;align-items:center;gap:6px;font-size:.8rem;color:rgba(255,255,255,.45);font-weight:500}
+.meta-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.2)}
+
+.blog-layout{max-width:1100px;margin:0 auto;padding:60px 5%;display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:start}
+
+.blog-body{font-size:1rem;line-height:1.85;color:var(--grey-700)}
+.blog-body p{margin-bottom:1.4em}
+.blog-body h2{font-size:1.35rem;font-weight:800;color:var(--navy);line-height:1.15;letter-spacing:-.02em;margin:2.2em 0 .7em}
+.blog-body h2:first-child{margin-top:0}
+.blog-body h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin:1.8em 0 .5em}
+.blog-list{margin:.6em 0 1.4em 0;display:flex;flex-direction:column;gap:8px}
+.blog-list li{display:flex;align-items:flex-start;gap:10px;font-size:.93rem;color:var(--grey-700);line-height:1.65}
+.blog-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:8px}
+.blog-intro{font-size:1.07rem;color:var(--grey-600);line-height:1.85;margin-bottom:2em;padding-bottom:2em;border-bottom:1px solid var(--grey-200)}
+
+.sidebar{display:flex;flex-direction:column;gap:20px}
+.sidebar-cta{background:var(--navy);border-radius:var(--radius-lg);padding:28px;position:sticky;top:80px}
+.sidebar-cta h3{font-size:1rem;font-weight:800;color:var(--white);margin-bottom:8px;line-height:1.25}
+.sidebar-cta p{font-size:.83rem;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:20px}
+.sidebar-cta-btn{display:block;text-align:center;background:var(--blue);color:var(--white);font-weight:700;font-size:.9rem;padding:12px 20px;border-radius:9px;transition:background .2s}
+.sidebar-cta-btn:hover{background:var(--blue-hover)}
+.sidebar-related{background:var(--grey-50);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:24px}
+.sidebar-related h4{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-600);margin-bottom:14px}
+.related-link{display:block;padding:10px 0;border-bottom:1px solid var(--grey-200);font-size:.83rem;font-weight:600;color:var(--navy);line-height:1.4;transition:color .15s}
+.related-link:last-child{border-bottom:none;padding-bottom:0}
+.related-link:hover{color:var(--blue)}
+
+.blog-related-section{max-width:1100px;margin:0 auto;padding:0 5% 80px}
+.blog-related-section h2{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:24px}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.related-card{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:22px;transition:border-color .2s,box-shadow .2s;display:block}
+.related-card:hover{border-color:var(--blue);box-shadow:var(--shadow)}
+.related-cat{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.related-title{font-size:.9rem;font-weight:700;color:var(--navy);line-height:1.4;margin-bottom:8px}
+.related-meta{font-size:.75rem;color:var(--grey-600)}
+
+footer{background:var(--navy);padding:40px 5% 24px;margin-top:0}
+.footer-inner{max-width:1160px;margin:0 auto;display:flex;align-items:flex-start;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px}
+.footer-brand p{font-size:.83rem;color:rgba(255,255,255,.4);line-height:1.7;max-width:240px;margin-top:10px}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.5);transition:color .15s}
+.footer-links a:hover{color:var(--white)}
+.footer-links h4{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:6px}
+.footer-bottom{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;font-size:.75rem;color:rgba(255,255,255,.3);flex-wrap:wrap;gap:6px}
+
+@media(max-width:860px){.blog-layout{grid-template-columns:1fr}.sidebar-cta{position:static}}
+@media(max-width:640px){.blog-hero h1{font-size:1.8rem}.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="${BRAND.domain}">
+    <div class="logo-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 5.5L12 7.5V11.5L9 13.5L6 11.5V7.5L9 5.5Z" fill="white" fill-opacity=".25"/></svg></div>
+    <div class="logo-text">DS<span>Cleaners</span></div>
+  </a>
+  <div style="display:flex;align-items:center;gap:8px">
+    <a href="${BRAND.domain}/blog/" class="nav-home">Blog</a>
+    <a href="${relatedLandingUrl}" class="nav-cta">Get a Free Quote</a>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <div class="breadcrumb">
+      <a href="${BRAND.domain}">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="${BRAND.domain}/blog/">Blog</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>${post.category}</span>
+    </div>
+    <div class="blog-cat-badge">${post.category}</div>
+    <h1>${post.title}</h1>
+    <div class="blog-meta">
+      <div class="blog-meta-item">DS Cleaners</div>
+      <div class="meta-dot"></div>
+      <div class="blog-meta-item">${dateFormatted}</div>
+      <div class="meta-dot"></div>
+      <div class="blog-meta-item">${post.readMins} min read</div>
+    </div>
+  </div>
+</div>
+
+<div class="blog-layout">
+  <article class="blog-body">
+    <p class="blog-intro">${post.intro}</p>
+    ${sectionsHtml}
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-cta">
+      <h3>${post.cta.heading}</h3>
+      <p>${post.cta.body}</p>
+      <a href="${relatedLandingUrl}" class="sidebar-cta-btn">${post.cta.label}</a>
+    </div>
+    <div class="sidebar-related">
+      <h4>Related Articles</h4>
+      ${BLOG_POSTS.filter(p => p.slug !== post.slug).slice(0, 4).map(p =>
+        `<a href="${BRAND.domain}/blog/${p.slug}.html" class="related-link">${p.title}</a>`
+      ).join('')}
+    </div>
+  </aside>
+</div>
+
+<div class="blog-related-section">
+  <h2>More from the DS Cleaners Blog</h2>
+  <div class="related-grid">${relatedPostsHtml}</div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo"><div class="logo-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="logo-text" style="color:white">DS<span>Cleaners</span></div></div>
+      <p>Family-owned professional cleaning across London. Trusted since 2009.</p>
+    </div>
+    <div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="${BRAND.domain}/landing/domestic-cleaning-london.html">Domestic Cleaning</a>
+        <a href="${BRAND.domain}/landing/deep-cleaning-london.html">Deep Cleaning</a>
+        <a href="${BRAND.domain}/landing/end-of-tenancy-cleaning-london.html">End of Tenancy</a>
+        <a href="${BRAND.domain}/landing/commercial-cleaning-london.html">Commercial Cleaning</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <h4>Blog</h4>
+        ${BLOG_POSTS.slice(0, 4).map(p => `<a href="${BRAND.domain}/blog/${p.slug}.html">${p.title.substring(0, 40)}…</a>`).join('')}
+      </div>
+    </div>
+    <div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <a href="tel:${BRAND.phone.replace(/\s/g, '')}">${BRAND.phone}</a>
+        <a href="mailto:${BRAND.email}">${BRAND.email}</a>
+        <a>Mon–Sat: 8am–6pm</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2024 DS Cleaners. All rights reserved.</span>
+    <span>${post.category} &middot; DS Cleaners Blog</span>
+  </div>
+</footer>
+
+</body>
+</html>`;
+}
+
+// Duplicate slug guard — fail fast if any slugs collide
+(function checkDuplicates() {
+    const blogSlugs = BLOG_POSTS.map(p => p.slug);
+    const seen = new Set();
+    for (const slug of blogSlugs) {
+        if (seen.has(slug)) throw new Error(`Duplicate blog slug: "${slug}"`);
+        seen.add(slug);
+    }
+    const landingSlugs = SERVICES.flatMap(s => AREAS.map(a => `${s.slug}-${a.slug}`));
+    const lSeen = new Set();
+    for (const slug of landingSlugs) {
+        if (lSeen.has(slug)) throw new Error(`Duplicate landing slug: "${slug}"`);
+        lSeen.add(slug);
+    }
+})();
+
+// Generate blog pages
+let blogCount = 0;
+const blogDir = path.join(__dirname, 'blog');
+
+if (!fs.existsSync(blogDir)) {
+    fs.mkdirSync(blogDir, { recursive: true });
+}
+
+for (const post of BLOG_POSTS) {
+    const filename = `${post.slug}.html`;
+    const html = buildBlogPage(post);
+    fs.writeFileSync(path.join(blogDir, filename), html);
+    console.log(`✓ blog/${filename}`);
+    blogCount++;
+}
+
+console.log(`\n✅ Generated ${blogCount} blog pages`);
+
+// Generate blog index page
+const blogIndexHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Cleaning Tips &amp; Guides Blog | DS Cleaners London</title>
+<meta name="description" content="Practical cleaning guides, tips, and advice from DS Cleaners — London's trusted professional cleaning service since 2009."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="${BRAND.domain}/blog/"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "DS Cleaners Blog",
+  "description": "Practical cleaning guides and advice from DS Cleaners London.",
+  "url": "${BRAND.domain}/blog/",
+  "publisher": {"@type":"Organization","name":"${BRAND.name}","url":"${BRAND.domain}"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#0c1e35;--blue:#1c7ed6;--blue-hover:#1971c2;--white:#fff;--grey-50:#f8f9fa;--grey-100:#f1f3f5;--grey-200:#e9ecef;--grey-600:#6c757d;--grey-700:#495057;--grey-900:#212529;--ff:'Plus Jakarta Sans',sans-serif;--radius-lg:16px;--shadow:0 4px 20px rgba(0,0,0,.09)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff);color:var(--grey-900);background:var(--white);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:100;height:64px;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--grey-200);display:flex;align-items:center;justify-content:space-between;padding:0 5%}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:34px;height:34px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-text{font-size:1.05rem;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+.logo-text span{color:var(--blue)}
+.nav-cta{background:var(--blue);color:var(--white);font-weight:700;font-size:.85rem;padding:9px 20px;border-radius:8px;border:none;transition:background .2s}
+.nav-cta:hover{background:var(--blue-hover)}
+.index-hero{background:var(--navy);padding:64px 5% 52px;text-align:center}
+.index-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--white);margin-bottom:14px}
+.index-hero p{font-size:1rem;color:rgba(255,255,255,.55);max-width:520px;margin:0 auto}
+.index-inner{max-width:1100px;margin:0 auto;padding:60px 5% 80px}
+.index-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.post-card{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:26px;transition:border-color .2s,box-shadow .2s;display:block}
+.post-card:hover{border-color:var(--blue);box-shadow:var(--shadow)}
+.post-cat{font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.post-title{font-size:.97rem;font-weight:700;color:var(--navy);line-height:1.35;margin-bottom:10px}
+.post-meta{font-size:.75rem;color:var(--grey-600)}
+footer{background:var(--navy);padding:32px 5% 20px}
+.footer-bottom{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;font-size:.75rem;color:rgba(255,255,255,.3);flex-wrap:wrap;gap:6px}
+@media(max-width:760px){.index-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.index-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="${BRAND.domain}">
+    <div class="logo-icon"><svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+    <div class="logo-text">DS<span>Cleaners</span></div>
+  </a>
+  <a href="${BRAND.domain}/landing/cleaning-services-london.html" class="nav-cta">Get a Free Quote</a>
+</nav>
+<div class="index-hero">
+  <h1>Cleaning Tips &amp; Guides</h1>
+  <p>Practical advice from DS Cleaners — London's professional cleaning service since 2009.</p>
+</div>
+<div class="index-inner">
+  <div class="index-grid">
+    ${BLOG_POSTS.map(p => `
+    <a href="${BRAND.domain}/blog/${p.slug}.html" class="post-card">
+      <div class="post-cat">${p.category}</div>
+      <div class="post-title">${p.title}</div>
+      <div class="post-meta">${new Date(p.datePublished).toLocaleDateString('en-GB', {day:'numeric',month:'long',year:'numeric'})} &middot; ${p.readMins} min read</div>
+    </a>`).join('')}
+  </div>
+</div>
+<footer>
+  <div class="footer-bottom">
+    <span>&copy; 2024 DS Cleaners. All rights reserved.</span>
+    <a href="${BRAND.domain}" style="color:rgba(255,255,255,.3)">DS Cleaners Home</a>
+  </div>
+</footer>
+</body>
+</html>`;
+
+fs.writeFileSync(path.join(blogDir, 'index.html'), blogIndexHtml);
+console.log('✓ blog/index.html');
+console.log(`\nTotal generated: ${count} landing pages + ${blogCount} blog posts + 1 blog index`);

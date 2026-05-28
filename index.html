@@ -84,6 +84,103 @@
             display: block
         }
 
+        /* BLOG NAV LINK */
+        .nav-blog {
+            background: none;
+            border: none;
+            font-size: .875rem;
+            font-weight: 500;
+            color: var(--grey-700);
+            padding: 7px 14px;
+            border-radius: 7px;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center
+        }
+
+        .nav-blog:hover {
+            color: var(--navy);
+            background: var(--grey-100)
+        }
+
+        .mob-blog-btn {
+            display: block;
+            font-size: .95rem;
+            font-weight: 500;
+            color: var(--grey-700);
+            padding: 12px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition)
+        }
+
+        .mob-blog-btn:hover {
+            background: var(--grey-50);
+            color: var(--navy)
+        }
+
+        /* BLOG TEASER SECTION */
+        .blog-teaser-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 48px
+        }
+
+        .blog-teaser-card {
+            background: var(--white);
+            border: 1px solid var(--grey-200);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: border-color .2s, box-shadow .2s;
+            display: block;
+            text-decoration: none
+        }
+
+        .blog-teaser-card:hover {
+            border-color: var(--blue);
+            box-shadow: var(--shadow)
+        }
+
+        .blog-teaser-cat {
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+            color: var(--blue);
+            margin-bottom: 10px
+        }
+
+        .blog-teaser-title {
+            font-size: .95rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.35;
+            margin-bottom: 10px
+        }
+
+        .blog-teaser-excerpt {
+            font-size: .83rem;
+            color: var(--grey-600);
+            line-height: 1.65;
+            margin-bottom: 14px
+        }
+
+        .blog-teaser-meta {
+            font-size: .75rem;
+            color: var(--grey-400);
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .blog-teaser-read {
+            font-size: .78rem;
+            font-weight: 700;
+            color: var(--blue)
+        }
+
         /* NAV */
         nav {
             position: fixed;
@@ -2141,6 +2238,7 @@
             <button id="n-services" onclick="go('services')">Services</button>
             <button id="n-about" onclick="go('about')">About</button>
             <button id="n-gallery" onclick="go('gallery')">Gallery</button>
+            <a href="blog/" class="nav-blog">Blog</a>
             <button id="n-quote" class="nav-calc" onclick="go('quote')">Price Calculator</button>
             <button id="n-contact" class="nav-quote" onclick="go('contact')">Get a Quote</button>
         </div>
@@ -2151,6 +2249,7 @@
         <button onclick="go('services');toggleMob()">Services</button>
         <button onclick="go('about');toggleMob()">About</button>
         <button onclick="go('gallery');toggleMob()">Gallery</button>
+        <a href="blog/" class="mob-blog-btn">Blog &amp; Guides</a>
         <button class="mob-calc-btn" onclick="go('quote');toggleMob()">Price Calculator</button>
         <button class="mob-quote-btn" onclick="go('contact');toggleMob()">Get a Free Quote</button>
     </div>
@@ -2601,6 +2700,39 @@
             </div>
         </section>
 
+        <section class="sec" style="background:var(--grey-50);border-top:1px solid var(--grey-200)">
+            <div class="wrap">
+                <div class="hdr c">
+                    <div class="sec-pre">Guides &amp; Tips</div>
+                    <h2 class="sec-h2">Cleaning Advice from DS Cleaners</h2>
+                    <p class="sec-body">Practical guides from 15 years of professional cleaning experience across London.</p>
+                </div>
+                <div class="blog-teaser-grid">
+                    <a href="blog/end-of-tenancy-cleaning-checklist-london.html" class="blog-teaser-card">
+                        <div class="blog-teaser-cat">End of Tenancy</div>
+                        <div class="blog-teaser-title">End of Tenancy Cleaning Checklist London (2025) — Room by Room</div>
+                        <p class="blog-teaser-excerpt">A complete room-by-room checklist covering every area a letting agent will inspect. Use it yourself or know exactly what to expect from a professional clean.</p>
+                        <div class="blog-teaser-meta"><span>7 min read</span><span class="blog-teaser-read">Read guide &rarr;</span></div>
+                    </a>
+                    <a href="blog/how-to-get-your-deposit-back-end-of-tenancy.html" class="blog-teaser-card">
+                        <div class="blog-teaser-cat">End of Tenancy</div>
+                        <div class="blog-teaser-title">How to Get Your Full Deposit Back: End of Tenancy Cleaning Guide</div>
+                        <p class="blog-teaser-excerpt">Cleaning accounts for 56% of all deposit deductions. This guide explains what agents actually look for — and how to make sure you hit the standard.</p>
+                        <div class="blog-teaser-meta"><span>6 min read</span><span class="blog-teaser-read">Read guide &rarr;</span></div>
+                    </a>
+                    <a href="blog/deep-clean-vs-regular-clean.html" class="blog-teaser-card">
+                        <div class="blog-teaser-cat">Deep Cleaning</div>
+                        <div class="blog-teaser-title">Deep Cleaning vs Regular Cleaning: What's the Difference?</div>
+                        <p class="blog-teaser-excerpt">A clear breakdown of what separates a deep clean from a regular clean — scope, time, and cost — so you can book the right service.</p>
+                        <div class="blog-teaser-meta"><span>5 min read</span><span class="blog-teaser-read">Read guide &rarr;</span></div>
+                    </a>
+                </div>
+                <div style="text-align:center;margin-top:36px">
+                    <a href="blog/" class="btn-secondary" style="display:inline-flex">View all guides &rarr;</a>
+                </div>
+            </div>
+        </section>
+
         <div class="cta-band">
             <div class="cta-band-inner">
                 <div>
@@ -2635,21 +2767,23 @@
                         <li onclick="go('gallery')">Gallery</li>
                         <li onclick="go('quote')">Price Calculator</li>
                         <li onclick="go('contact')">Get a Quote</li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Blog &amp; Guides</a></li>
                     </ul>
                 </div>
                 <div class="fc">
-                    <h4>Services</h4>
+                    <h4>Guides &amp; Blog</h4>
                     <ul>
-                        <li>Domestic Cleaning</li>
-                        <li>Commercial Cleaning</li>
-                        <li>Deep Cleaning</li>
-                        <li>End of Tenancy</li>
+                        <li><a href="blog/end-of-tenancy-cleaning-checklist-london.html" style="color:inherit;text-decoration:none">EOT Checklist London</a></li>
+                        <li><a href="blog/how-to-get-your-deposit-back-end-of-tenancy.html" style="color:inherit;text-decoration:none">Get Your Deposit Back</a></li>
+                        <li><a href="blog/deep-clean-vs-regular-clean.html" style="color:inherit;text-decoration:none">Deep Clean vs Regular</a></li>
+                        <li><a href="blog/office-cleaning-london-guide.html" style="color:inherit;text-decoration:none">Office Cleaning Guide</a></li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.35);text-decoration:none">All Guides &rarr;</a></li>
                     </ul>
                 </div>
                 <div class="fc">
                     <h4>Contact</h4>
                     <ul>
-                        <li>+44 XXXX XXXXXX</li>
+                        <li>+44 7765 875615</li>
                         <li>info@dscleaners.com</li>
                         <li>Your Town, UK</li>
                         <li>Mon–Sat: 8am–6pm</li>
@@ -2868,21 +3002,23 @@
                         <li onclick="go('gallery')">Gallery</li>
                         <li onclick="go('quote')">Price Calculator</li>
                         <li onclick="go('contact')">Get a Quote</li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Blog &amp; Guides</a></li>
                     </ul>
                 </div>
                 <div class="fc">
-                    <h4>Services</h4>
+                    <h4>Guides &amp; Blog</h4>
                     <ul>
-                        <li>Domestic</li>
-                        <li>Commercial</li>
-                        <li>Deep Cleaning</li>
-                        <li>End of Tenancy</li>
+                        <li><a href="blog/end-of-tenancy-cleaning-checklist-london.html" style="color:inherit;text-decoration:none">EOT Checklist London</a></li>
+                        <li><a href="blog/how-to-get-your-deposit-back-end-of-tenancy.html" style="color:inherit;text-decoration:none">Get Your Deposit Back</a></li>
+                        <li><a href="blog/deep-clean-vs-regular-clean.html" style="color:inherit;text-decoration:none">Deep Clean vs Regular</a></li>
+                        <li><a href="blog/office-cleaning-london-guide.html" style="color:inherit;text-decoration:none">Office Cleaning Guide</a></li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.35);text-decoration:none">All Guides &rarr;</a></li>
                     </ul>
                 </div>
                 <div class="fc">
                     <h4>Contact</h4>
                     <ul>
-                        <li>+44 XXXX XXXXXX</li>
+                        <li>+44 7765 875615</li>
                         <li>info@dscleaners.com</li>
                         <li>Mon–Sat: 8am–6pm</li>
                         <li><a href="https://www.linkedin.com/company/ds-cleaners" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -3012,21 +3148,23 @@
                         <li onclick="go('gallery')">Gallery</li>
                         <li onclick="go('quote')">Price Calculator</li>
                         <li onclick="go('contact')">Get a Quote</li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Blog &amp; Guides</a></li>
                     </ul>
                 </div>
                 <div class="fc">
-                    <h4>Services</h4>
+                    <h4>Guides &amp; Blog</h4>
                     <ul>
-                        <li>Domestic</li>
-                        <li>Commercial</li>
-                        <li>Deep Cleaning</li>
-                        <li>End of Tenancy</li>
+                        <li><a href="blog/end-of-tenancy-cleaning-checklist-london.html" style="color:inherit;text-decoration:none">EOT Checklist London</a></li>
+                        <li><a href="blog/how-to-get-your-deposit-back-end-of-tenancy.html" style="color:inherit;text-decoration:none">Get Your Deposit Back</a></li>
+                        <li><a href="blog/deep-clean-vs-regular-clean.html" style="color:inherit;text-decoration:none">Deep Clean vs Regular</a></li>
+                        <li><a href="blog/office-cleaning-london-guide.html" style="color:inherit;text-decoration:none">Office Cleaning Guide</a></li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.35);text-decoration:none">All Guides &rarr;</a></li>
                     </ul>
                 </div>
                 <div class="fc">
                     <h4>Contact</h4>
                     <ul>
-                        <li>+44 XXXX XXXXXX</li>
+                        <li>+44 7765 875615</li>
                         <li>info@dscleaners.com</li>
                         <li><a href="https://www.linkedin.com/company/ds-cleaners" target="_blank" rel="noopener">LinkedIn</a></li>
                     </ul>
@@ -3096,21 +3234,23 @@
                         <li onclick="go('gallery')">Gallery</li>
                         <li onclick="go('quote')">Price Calculator</li>
                         <li onclick="go('contact')">Get a Quote</li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Blog &amp; Guides</a></li>
                     </ul>
                 </div>
                 <div class="fc">
-                    <h4>Services</h4>
+                    <h4>Guides &amp; Blog</h4>
                     <ul>
-                        <li>Domestic</li>
-                        <li>Commercial</li>
-                        <li>Deep Cleaning</li>
-                        <li>End of Tenancy</li>
+                        <li><a href="blog/end-of-tenancy-cleaning-checklist-london.html" style="color:inherit;text-decoration:none">EOT Checklist London</a></li>
+                        <li><a href="blog/how-to-get-your-deposit-back-end-of-tenancy.html" style="color:inherit;text-decoration:none">Get Your Deposit Back</a></li>
+                        <li><a href="blog/deep-clean-vs-regular-clean.html" style="color:inherit;text-decoration:none">Deep Clean vs Regular</a></li>
+                        <li><a href="blog/office-cleaning-london-guide.html" style="color:inherit;text-decoration:none">Office Cleaning Guide</a></li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.35);text-decoration:none">All Guides &rarr;</a></li>
                     </ul>
                 </div>
                 <div class="fc">
                     <h4>Contact</h4>
                     <ul>
-                        <li>+44 XXXX XXXXXX</li>
+                        <li>+44 7765 875615</li>
                         <li>info@dscleaners.com</li>
                         <li><a href="https://www.linkedin.com/company/ds-cleaners" target="_blank" rel="noopener">LinkedIn</a></li>
                     </ul>
@@ -3251,7 +3391,7 @@
                                     <div class="f-g"><label>Email <em>*</em></label><input type="email" name="email"
                                             placeholder="john@email.com" required /></div>
                                     <div class="f-g"><label>Phone</label><input type="tel" name="phone"
-                                            placeholder="+44 XXXX XXXXXX" /></div>
+                                            placeholder="+44 7765 875615" /></div>
                                     <div class="f-g"><label>Additional notes</label><textarea name="notes"
                                             placeholder="Preferred dates, access details, anything else..."
                                             style="min-height:80px"></textarea></div>
@@ -3321,21 +3461,23 @@
                         <li onclick="go('gallery')">Gallery</li>
                         <li onclick="go('quote')">Price Calculator</li>
                         <li onclick="go('contact')">Get a Quote</li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Blog &amp; Guides</a></li>
                     </ul>
                 </div>
                 <div class="fc">
-                    <h4>Services</h4>
+                    <h4>Guides &amp; Blog</h4>
                     <ul>
-                        <li>Domestic</li>
-                        <li>Commercial</li>
-                        <li>Deep Cleaning</li>
-                        <li>End of Tenancy</li>
+                        <li><a href="blog/end-of-tenancy-cleaning-checklist-london.html" style="color:inherit;text-decoration:none">EOT Checklist London</a></li>
+                        <li><a href="blog/how-to-get-your-deposit-back-end-of-tenancy.html" style="color:inherit;text-decoration:none">Get Your Deposit Back</a></li>
+                        <li><a href="blog/deep-clean-vs-regular-clean.html" style="color:inherit;text-decoration:none">Deep Clean vs Regular</a></li>
+                        <li><a href="blog/office-cleaning-london-guide.html" style="color:inherit;text-decoration:none">Office Cleaning Guide</a></li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.35);text-decoration:none">All Guides &rarr;</a></li>
                     </ul>
                 </div>
                 <div class="fc">
                     <h4>Contact</h4>
                     <ul>
-                        <li>+44 XXXX XXXXXX</li>
+                        <li>+44 7765 875615</li>
                         <li>info@dscleaners.com</li>
                         <li>Mon–Sat: 8am–6pm</li>
                         <li><a href="https://www.linkedin.com/company/ds-cleaners" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -3368,7 +3510,7 @@
                                 </svg></div>
                             <div>
                                 <div class="c-label">Phone</div>
-                                <div class="c-val">+44 XXXX XXXXXX</div>
+                                <div class="c-val">+44 7765 875615</div>
                             </div>
                         </div>
                         <div class="c-row">
@@ -3427,7 +3569,7 @@
                                 <div class="f-g"><label>Email Address <em>*</em></label><input type="email" name="email"
                                         placeholder="john@email.com" required /></div>
                                 <div class="f-g"><label>Phone Number</label><input type="tel" name="phone"
-                                        placeholder="+44 XXXX XXXXXX" /></div>
+                                        placeholder="+44 7765 875615" /></div>
                                 <div class="f-g"><label>Service Required <em>*</em></label><select name="service"
                                         required>
                                         <option value="" disabled selected>Select a service...</option>
@@ -3501,21 +3643,23 @@
                         <li onclick="go('gallery')">Gallery</li>
                         <li onclick="go('quote')">Price Calculator</li>
                         <li onclick="go('contact')">Get a Quote</li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Blog &amp; Guides</a></li>
                     </ul>
                 </div>
                 <div class="fc">
-                    <h4>Services</h4>
+                    <h4>Guides &amp; Blog</h4>
                     <ul>
-                        <li>Domestic</li>
-                        <li>Commercial</li>
-                        <li>Deep Cleaning</li>
-                        <li>End of Tenancy</li>
+                        <li><a href="blog/end-of-tenancy-cleaning-checklist-london.html" style="color:inherit;text-decoration:none">EOT Checklist London</a></li>
+                        <li><a href="blog/how-to-get-your-deposit-back-end-of-tenancy.html" style="color:inherit;text-decoration:none">Get Your Deposit Back</a></li>
+                        <li><a href="blog/deep-clean-vs-regular-clean.html" style="color:inherit;text-decoration:none">Deep Clean vs Regular</a></li>
+                        <li><a href="blog/office-cleaning-london-guide.html" style="color:inherit;text-decoration:none">Office Cleaning Guide</a></li>
+                        <li><a href="blog/" style="color:rgba(255,255,255,.35);text-decoration:none">All Guides &rarr;</a></li>
                     </ul>
                 </div>
                 <div class="fc">
                     <h4>Contact</h4>
                     <ul>
-                        <li>+44 XXXX XXXXXX</li>
+                        <li>+44 7765 875615</li>
                         <li>info@dscleaners.com</li>
                         <li>Mon–Sat: 8am–6pm</li>
                         <li><a href="https://www.linkedin.com/company/ds-cleaners" target="_blank" rel="noopener">LinkedIn</a></li>
