@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>DS Cleaners | Professional Cleaning Services</title>
+<meta name="description" content="DS Cleaners – family-owned, 15+ years of spotless commercial and domestic cleaning. Get an instant price estimate today."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy:#0c1e35;--navy-light:#1a3352;--blue:#1c7ed6;--blue-hover:#1971c2;
+  --blue-pale:#e8f3fd;--blue-paler:#f4f9fe;--white:#ffffff;
+  --grey-50:#f8f9fa;--grey-100:#f1f3f5;--grey-200:#e9ecef;--grey-300:#dee2e6;
+  --grey-400:#ced4da;--grey-600:#6c757d;--grey-700:#495057;--grey-900:#212529;
+  --green:#2f9e44;--ff:'Plus Jakarta Sans',sans-serif;
+  --radius:10px;--radius-lg:16px;
+  --shadow:0 4px 20px rgba(0,0,0,.09);--shadow-lg:0 12px 48px rgba(0,0,0,.12);
+  --transition:all .2s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff);color:var(--grey-900);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}ul{list-style:none}
+button{font-family:var(--ff);cursor:pointer}img{display:block;max-width:100%}
+.page{display:none}.page.active{display:block}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--grey-200);display:flex;align-items:center;padding:0 5%;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;cursor:pointer;user-select:none}
+.logo-icon{width:36px;height:36px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-text{font-size:1.1rem;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+.logo-text span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-links button{background:none;border:none;font-size:.875rem;font-weight:500;color:var(--grey-700);padding:7px 14px;border-radius:7px;transition:var(--transition)}
+.nav-links button:hover,.nav-links button.active{color:var(--navy);background:var(--grey-100)}
+.nav-quote{background:var(--blue)!important;color:var(--white)!important;font-weight:700!important;padding:8px 20px!important;border-radius:8px!important;margin-left:4px}
+.nav-quote:hover{background:var(--blue-hover)!important}
+.nav-calc{background:var(--navy)!important;color:var(--white)!important;font-weight:700!important;padding:8px 20px!important;border-radius:8px!important}
+.nav-calc:hover{background:var(--navy-light)!important}
+.hamburger{display:none;flex-direction:column;gap:4px;background:none;border:none;padding:6px}
+.hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px;transition:.25s}
+.mob-menu{display:none;position:fixed;top:68px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--grey-200);z-index:999;flex-direction:column;padding:12px 16px 16px;gap:2px;box-shadow:var(--shadow-lg)}
+.mob-menu.open{display:flex}
+.mob-menu button{background:none;border:none;font-size:.95rem;font-weight:500;color:var(--grey-700);padding:12px 14px;border-radius:8px;text-align:left;transition:var(--transition)}
+.mob-menu button:hover{background:var(--grey-50);color:var(--navy)}
+.mob-quote-btn{background:var(--blue)!important;color:var(--white)!important;font-weight:700!important;margin-top:4px;border-radius:8px!important}
+.mob-calc-btn{background:var(--navy)!important;color:var(--white)!important;font-weight:700!important;margin-top:4px;border-radius:8px!important}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:var(--white);font-weight:700;font-size:.95rem;padding:14px 28px;border-radius:var(--radius);border:none;transition:background .2s,transform .15s,box-shadow .2s;letter-spacing:-.01em;cursor:pointer}
+.btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(28,126,214,.3)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--navy);font-weight:600;font-size:.95rem;padding:13px 24px;border-radius:var(--radius);border:1.5px solid var(--grey-300);transition:var(--transition);cursor:pointer}
+.btn-secondary:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-1px)}
+.btn-navy{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:var(--white);font-weight:700;font-size:.95rem;padding:14px 28px;border-radius:var(--radius);border:none;transition:background .2s,transform .15s;cursor:pointer}
+.btn-navy:hover{background:var(--navy-light);transform:translateY(-1px)}
+
+/* HERO */
+.hero{padding-top:68px;background:var(--navy);min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(105deg,rgba(12,30,53,.92) 0%,rgba(12,30,53,.75) 45%,rgba(12,30,53,.35) 100%),url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1600&q=80') center/cover no-repeat}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 5%;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.85);font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 13px;border-radius:50px;margin-bottom:28px}
+.hero-tag-dot{width:6px;height:6px;background:#4ade80;border-radius:50%}
+.hero-h1{font-size:clamp(2.6rem,5vw,4rem);font-weight:800;color:var(--white);line-height:1.08;letter-spacing:-.03em;max-width:680px;margin-bottom:22px}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.65);line-height:1.75;max-width:520px;margin-bottom:40px;font-weight:400}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}
+.hero-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-weight:600;font-size:.95rem;padding:13px 24px;border-radius:var(--radius);border:1.5px solid rgba(255,255,255,.3);transition:var(--transition);cursor:pointer}
+.hero-ghost:hover{border-color:rgba(255,255,255,.7)}
+.hero-trust{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.6);font-size:.83rem;font-weight:500}
+.hero-stats-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);margin-top:64px}
+.stat-item{padding:28px 24px;border-right:1px solid var(--grey-200);text-align:center}
+.stat-item:last-child{border-right:none}
+.stat-n{font-size:2rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1;margin-bottom:4px}
+.stat-n span{color:var(--blue)}
+.stat-l{font-size:.8rem;color:var(--grey-600);font-weight:500}
+
+/* SECTIONS */
+.sec{padding:96px 5%}
+.wrap{max-width:1200px;margin:0 auto}
+.sec-pre{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.sec-h2{font-size:clamp(1.8rem,3.5vw,2.75rem);font-weight:800;color:var(--navy);letter-spacing:-.025em;line-height:1.1;margin-bottom:16px}
+.sec-body{font-size:1rem;color:var(--grey-600);line-height:1.8;max-width:540px;font-weight:400}
+.hdr{margin-bottom:60px}.hdr.c{text-align:center}.hdr.c .sec-body{margin:0 auto}
+
+/* TRUST BAR */
+.trust-bar{background:var(--grey-50);border-top:1px solid var(--grey-200);border-bottom:1px solid var(--grey-200);padding:20px 5%}
+.trust-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-pill{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:600;color:var(--grey-700)}
+.trust-pill-check{width:18px;height:18px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.svc-card{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .2s}
+.svc-card:hover{border-color:var(--blue);box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.svc-img{height:200px;position:relative;overflow:hidden}
+.svc-img-inner{width:100%;height:100%;background-size:cover;background-position:center;transition:transform .4s ease}
+.svc-card:hover .svc-img-inner{transform:scale(1.04)}
+.svc-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,30,53,.55) 0%,transparent 60%)}
+.svc-tag-on-img{position:absolute;top:14px;left:14px;background:var(--white);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--navy);padding:4px 10px;border-radius:50px}
+.svc-body{padding:24px}
+.svc-name{font-size:1.15rem;font-weight:800;color:var(--navy);margin-bottom:8px}
+.svc-desc{font-size:.875rem;color:var(--grey-600);line-height:1.75;margin-bottom:18px}
+.svc-list{display:flex;flex-direction:column;gap:7px}
+.svc-row{display:flex;align-items:flex-start;gap:10px;font-size:.85rem;color:var(--grey-700)}
+.svc-check{width:16px;height:16px;border-radius:50%;background:var(--blue-pale);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px}
+
+/* HOW IT WORKS */
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--grey-200);border-radius:var(--radius-lg);overflow:hidden}
+.step{background:var(--white);padding:36px 28px;transition:background .2s}
+.step:hover{background:var(--blue-paler)}
+.step-num{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:20px;display:block}
+.step-icon{width:44px;height:44px;border:1.5px solid var(--grey-200);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;background:var(--white)}
+.step-title{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.step-desc{font-size:.85rem;color:var(--grey-600);line-height:1.7}
+
+/* FEATURES */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.feat-grid.rev{direction:rtl}.feat-grid.rev>*{direction:ltr}
+.feat-visual{background:var(--grey-50);border:1px solid var(--grey-200);border-radius:var(--radius-lg);overflow:hidden;position:relative;height:440px}
+.feat-photo{width:100%;height:100%;background-size:cover;background-position:center}
+.feat-badge{position:absolute;bottom:20px;left:20px;background:var(--white);border-radius:10px;padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;max-width:240px}
+.feat-badge-icon{width:38px;height:38px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.feat-badge-title{font-size:.82rem;font-weight:700;color:var(--navy)}
+.feat-badge-sub{font-size:.75rem;color:var(--grey-600)}
+.feat-checklist{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.feat-check-row{display:flex;align-items:flex-start;gap:12px}
+.feat-check-box{width:22px;height:22px;background:var(--blue-pale);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.feat-check-text strong{display:block;font-size:.9rem;font-weight:700;color:var(--navy)}
+.feat-check-text span{font-size:.83rem;color:var(--grey-600);line-height:1.6}
+
+/* REVIEWS */
+.reviews-sec{background:var(--grey-50)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review-card{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:28px;transition:box-shadow .2s,border-color .2s}
+.review-card:hover{box-shadow:var(--shadow);border-color:var(--grey-400)}
+.review-stars{display:flex;gap:3px;margin-bottom:14px}
+.review-text{font-size:.9rem;color:var(--grey-700);line-height:1.8;margin-bottom:22px}
+.review-author{display:flex;align-items:center;gap:12px}
+.review-av{width:40px;height:40px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:.8rem;font-weight:700;flex-shrink:0}
+.review-name{font-size:.875rem;font-weight:700;color:var(--navy)}
+.review-meta{font-size:.75rem;color:var(--grey-600)}
+
+/* CTA BAND */
+.cta-band{background:var(--navy);padding:80px 5%}
+.cta-band-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
+.cta-band h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--white);letter-spacing:-.025em;margin-bottom:8px}
+.cta-band p{font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.7}
+.cta-band-btns{display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0}
+.btn-outline-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-weight:600;font-size:.9rem;padding:12px 22px;border-radius:var(--radius);border:1.5px solid rgba(255,255,255,.25);transition:var(--transition);cursor:pointer}
+.btn-outline-white:hover{border-color:rgba(255,255,255,.6)}
+
+/* FAQ */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--grey-200)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 0;cursor:pointer;font-size:.975rem;font-weight:600;color:var(--navy);background:none;border:none;width:100%;text-align:left;transition:color .15s}
+.faq-q:hover{color:var(--blue)}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--grey-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,transform .25s}
+.faq-item.open .faq-icon{background:var(--blue);transform:rotate(45deg)}
+.faq-item.open .faq-icon svg path{stroke:var(--white)}
+.faq-a{display:none;padding-bottom:20px;font-size:.9rem;color:var(--grey-600);line-height:1.8}
+.faq-item.open .faq-a{display:block}
+
+/* ABOUT */
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-photo-wrap{border-radius:var(--radius-lg);overflow:hidden;height:500px;position:relative}
+.about-photo{width:100%;height:100%;background:url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=900&q=80') center/cover no-repeat}
+.about-overlay-card{position:absolute;bottom:24px;right:24px;background:var(--white);border-radius:12px;padding:18px 22px;box-shadow:var(--shadow);min-width:180px}
+.aoc-n{font-size:2rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1}
+.aoc-n span{color:var(--blue)}.aoc-l{font-size:.8rem;color:var(--grey-600);margin-top:4px}
+.about-values{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.val-box{background:var(--grey-50);border:1px solid var(--grey-200);border-radius:var(--radius);padding:18px;transition:border-color .2s}
+.val-box:hover{border-color:var(--blue)}
+.val-label{font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.val-text{font-size:.8rem;color:var(--grey-600);line-height:1.6}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.team-card{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;transition:box-shadow .2s}
+.team-card:hover{box-shadow:var(--shadow)}
+.team-av{width:72px;height:72px;border-radius:50%;background:var(--navy);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;color:var(--white)}
+.team-name{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:3px}
+.team-role{font-size:.78rem;font-weight:600;color:var(--blue);margin-bottom:10px;letter-spacing:.02em;text-transform:uppercase}
+.team-bio{font-size:.83rem;color:var(--grey-600);line-height:1.65}
+
+/* GALLERY */
+.gallery-mosaic{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:14px}
+.gal-cell{border-radius:var(--radius);overflow:hidden;position:relative;cursor:pointer;background:var(--grey-100);border:1px solid var(--grey-200)}
+.gal-cell.tall{grid-row:span 2}.gal-cell.wide{grid-column:span 2}
+.gal-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;height:100%}
+.gal-empty-icon{width:40px;height:40px;background:var(--grey-200);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.gal-empty-text{font-size:.78rem;font-weight:600;color:var(--grey-600);letter-spacing:.04em;text-transform:uppercase}
+.gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,30,53,.6) 0%,transparent 55%);opacity:0;transition:opacity .25s;display:flex;align-items:flex-end;padding:16px}
+.gal-cell:hover .gal-overlay{opacity:1}
+.gal-label{font-size:.83rem;font-weight:600;color:var(--white)}
+.filter-bar{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap}
+.f-btn{background:var(--white);border:1.5px solid var(--grey-200);color:var(--grey-700);font-family:var(--ff);font-size:.82rem;font-weight:600;padding:7px 16px;border-radius:50px;transition:var(--transition);cursor:pointer}
+.f-btn.active,.f-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:52px;align-items:start}
+.contact-info h3{font-size:1.3rem;font-weight:800;color:var(--navy);margin-bottom:22px}
+.c-row{display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1px solid var(--grey-200);border-radius:10px;padding:16px;margin-bottom:12px;transition:border-color .2s}
+.c-row:hover{border-color:var(--blue)}
+.c-icon{width:38px;height:38px;background:var(--grey-50);border:1px solid var(--grey-200);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.c-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--grey-600);margin-bottom:2px}
+.c-val{font-size:.9rem;font-weight:600;color:var(--navy)}
+.c-promise{background:var(--navy);border-radius:10px;padding:20px;margin-top:18px}
+.c-promise-title{font-size:.9rem;font-weight:700;color:var(--white);margin-bottom:5px}
+.c-promise-text{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.65}
+.form-wrap{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:36px;box-shadow:var(--shadow)}
+.form-title{font-size:1.3rem;font-weight:800;color:var(--navy);margin-bottom:4px}
+.form-sub{font-size:.85rem;color:var(--grey-600);margin-bottom:26px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f-g{margin-bottom:16px}
+.f-g label{display:block;font-size:.8rem;font-weight:700;color:var(--grey-700);margin-bottom:6px}
+.f-g label em{color:var(--blue);font-style:normal}
+.f-g input,.f-g select,.f-g textarea{width:100%;padding:11px 14px;background:var(--grey-50);border:1.5px solid var(--grey-200);border-radius:8px;font-family:var(--ff);font-size:.9rem;color:var(--grey-900);outline:none;transition:border-color .18s,box-shadow .18s;appearance:none}
+.f-g input:focus,.f-g select:focus,.f-g textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(28,126,214,.12);background:var(--white)}
+.f-g textarea{resize:vertical;min-height:108px}
+.f-submit{width:100%;background:var(--blue);color:var(--white);font-family:var(--ff);font-weight:700;font-size:1rem;padding:14px;border-radius:9px;border:none;transition:background .2s,transform .15s,box-shadow .2s;cursor:pointer}
+.f-submit:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 6px 18px rgba(28,126,214,.3)}
+.f-note{text-align:center;font-size:.75rem;color:var(--grey-600);margin-top:12px}
+.f-success{display:none;text-align:center;padding:48px 20px}
+.f-success-icon{width:64px;height:64px;background:#d3f9d8;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.f-success h3{font-size:1.3rem;font-weight:800;color:var(--navy);margin-bottom:8px}
+.f-success p{font-size:.9rem;color:var(--grey-600);margin-bottom:24px}
+
+/* PAGE HERO */
+.page-hero{padding-top:68px;background:var(--grey-50);border-bottom:1px solid var(--grey-200)}
+.page-hero-inner{max-width:1200px;margin:0 auto;padding:64px 5% 56px}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:.78rem;font-weight:500;color:var(--grey-600);margin-bottom:18px}
+.breadcrumb span{color:var(--grey-400)}.breadcrumb strong{color:var(--navy)}
+.breadcrumb a{cursor:pointer;transition:color .15s}.breadcrumb a:hover{color:var(--blue)}
+.page-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1.1;margin-bottom:14px}
+.page-hero p{font-size:1rem;color:var(--grey-600);line-height:1.8;max-width:560px}
+
+/* FOOTER */
+footer{background:var(--navy);padding:60px 5% 28px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:48px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:28px}
+.footer-brand-text{font-size:.875rem;color:rgba(255,255,255,.4);line-height:1.75;max-width:260px;margin-top:14px}
+.fc h4{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.fc ul{display:flex;flex-direction:column;gap:10px}
+.fc li{font-size:.875rem;color:rgba(255,255,255,.5);cursor:pointer;transition:color .15s}
+.fc li:hover{color:var(--white)}
+.footer-bottom{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.3);flex-wrap:wrap;gap:8px}
+
+/* ── PRICE CALCULATOR ── */
+.calc-layout{display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:start}
+.calc-card{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow)}
+.calc-section{margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid var(--grey-100)}
+.calc-section:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.calc-section-title{font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:18px}
+
+.service-pills{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.service-pill{border:2px solid var(--grey-200);border-radius:var(--radius);padding:16px;cursor:pointer;transition:var(--transition);background:var(--white);text-align:left}
+.service-pill:hover{border-color:var(--blue);background:var(--blue-paler)}
+.service-pill.active{border-color:var(--blue);background:var(--blue-pale)}
+.service-pill-name{font-size:.9rem;font-weight:700;color:var(--navy);display:block;margin-bottom:3px}
+.service-pill-rate{font-size:.78rem;color:var(--grey-600)}
+.service-pill.active .service-pill-rate{color:var(--blue)}
+
+.stepper-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stepper-label{font-size:.82rem;font-weight:700;color:var(--grey-700);margin-bottom:10px;display:block}
+.stepper{display:flex;align-items:center;border:1.5px solid var(--grey-200);border-radius:9px;overflow:hidden}
+.stepper-btn{width:42px;height:44px;background:var(--grey-50);border:none;font-size:1.2rem;font-weight:700;color:var(--navy);cursor:pointer;transition:background .15s;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.stepper-btn:hover{background:var(--grey-100)}
+.stepper-val{flex:1;text-align:center;font-size:1rem;font-weight:700;color:var(--navy)}
+
+.addon-list{display:flex;flex-direction:column;gap:10px}
+.addon-item{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border:1.5px solid var(--grey-200);border-radius:var(--radius);cursor:pointer;transition:var(--transition);background:var(--white)}
+.addon-item:hover{border-color:var(--blue)}
+.addon-item.active{border-color:var(--blue);background:var(--blue-pale)}
+.addon-left{display:flex;align-items:center;gap:10px}
+.addon-check{width:20px;height:20px;border:2px solid var(--grey-300);border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--transition)}
+.addon-item.active .addon-check{background:var(--blue);border-color:var(--blue)}
+.addon-check svg{display:none}
+.addon-item.active .addon-check svg{display:block}
+.addon-name{font-size:.88rem;font-weight:600;color:var(--navy)}
+.addon-price{font-size:.85rem;font-weight:700;color:var(--blue)}
+
+.postcode-input-row{display:flex;gap:10px}
+.postcode-input-row input{flex:1;padding:12px 16px;background:var(--grey-50);border:1.5px solid var(--grey-200);border-radius:9px;font-family:var(--ff);font-size:.95rem;color:var(--grey-900);outline:none;transition:border-color .18s;text-transform:uppercase}
+.postcode-input-row input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(28,126,214,.12);background:var(--white)}
+.postcode-lookup-btn{padding:12px 20px;background:var(--navy);color:var(--white);font-family:var(--ff);font-size:.88rem;font-weight:700;border:none;border-radius:9px;cursor:pointer;white-space:nowrap;transition:background .2s;flex-shrink:0}
+.postcode-lookup-btn:hover{background:var(--navy-light)}
+.postcode-lookup-btn:disabled{opacity:.5;cursor:not-allowed}
+.postcode-result{margin-top:10px;padding:12px 14px;border-radius:8px;font-size:.85rem;font-weight:600;display:none}
+.postcode-result.ok{background:#d3f9d8;color:#1a6b2e;display:block}
+.postcode-result.err{background:#ffe3e3;color:#c92a2a;display:block}
+
+.quote-panel{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow);position:sticky;top:88px}
+.quote-panel-title{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--grey-100)}
+.quote-line{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.quote-line-label{font-size:.85rem;color:var(--grey-600)}
+.quote-line-val{font-size:.85rem;font-weight:600;color:var(--navy)}
+.quote-total{display:flex;justify-content:space-between;align-items:flex-start;padding-top:16px;margin-top:8px;border-top:2px solid var(--grey-200)}
+.quote-total-label{font-size:.9rem;font-weight:700;color:var(--navy)}
+.quote-range{font-size:.75rem;color:var(--grey-600);margin-top:3px}
+.quote-total-price{font-size:2rem;font-weight:800;color:var(--navy);letter-spacing:-.03em;line-height:1}
+.quote-total-price span{color:var(--blue)}
+.quote-disclaimer{font-size:.75rem;color:var(--grey-600);line-height:1.6;margin-top:16px;padding-top:14px;border-top:1px solid var(--grey-100)}
+.quote-cta{width:100%;background:var(--blue);color:var(--white);font-family:var(--ff);font-weight:700;font-size:.95rem;padding:14px;border-radius:9px;border:none;margin-top:20px;cursor:pointer;transition:background .2s,transform .15s}
+.quote-cta:hover{background:var(--blue-hover);transform:translateY(-1px)}
+.quote-empty{text-align:center;padding:32px 16px}
+.quote-empty-icon{font-size:2.5rem;margin-bottom:12px}
+.quote-empty-text{font-size:.85rem;color:var(--grey-600);line-height:1.7}
+
+.details-form{background:var(--white);border:1px solid var(--grey-200);border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow);margin-top:24px;display:none}
+.details-form.show{display:block}
+.details-form-title{font-size:1.1rem;font-weight:800;color:var(--navy);margin-bottom:6px}
+.details-form-sub{font-size:.85rem;color:var(--grey-600);margin-bottom:24px}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .nav-links{display:none}.hamburger{display:flex}
+  .hero-stats-bar{grid-template-columns:repeat(2,1fr)}
+  .stat-item:nth-child(2){border-right:none}
+  .services-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr 1fr}
+  .feat-grid{grid-template-columns:1fr;gap:36px}.feat-grid.rev{direction:ltr}
+  .reviews-grid{grid-template-columns:1fr}
+  .cta-band-inner{flex-direction:column;text-align:center}.cta-band-btns{justify-content:center}
+  .about-split{grid-template-columns:1fr;gap:40px}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .gallery-mosaic{grid-template-columns:1fr 1fr}.gal-cell.wide{grid-column:span 1}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .trust-bar-inner{gap:24px}.sec{padding:64px 5%}
+  .calc-layout{grid-template-columns:1fr}.quote-panel{position:static}
+  .service-pills{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .hero-btns{flex-direction:column;align-items:flex-start}.hero-trust{gap:16px}
+  .hero-stats-bar{grid-template-columns:1fr 1fr}
+  .steps-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr}
+  .gallery-mosaic{grid-template-columns:1fr}.gal-cell.tall{grid-row:span 1}
+  .footer-grid{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}
+  .about-values{grid-template-columns:1fr}.service-pills{grid-template-columns:1fr}
+  .stepper-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo" onclick="go('home')">
+    <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 5.5L12 7.5V11.5L9 13.5L6 11.5V7.5L9 5.5Z" fill="white" fill-opacity=".25"/></svg></div>
+    <div class="logo-text">DS<span>Cleaners</span></div>
+  </div>
+  <div class="nav-links">
+    <button id="n-home" class="active" onclick="go('home')">Home</button>
+    <button id="n-services" onclick="go('services')">Services</button>
+    <button id="n-about" onclick="go('about')">About</button>
+    <button id="n-gallery" onclick="go('gallery')">Gallery</button>
+    <button id="n-quote" class="nav-calc" onclick="go('quote')">Price Calculator</button>
+    <button id="n-contact" class="nav-quote" onclick="go('contact')">Get a Quote</button>
+  </div>
+  <button class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <button onclick="go('home');toggleMob()">Home</button>
+  <button onclick="go('services');toggleMob()">Services</button>
+  <button onclick="go('about');toggleMob()">About</button>
+  <button onclick="go('gallery');toggleMob()">Gallery</button>
+  <button class="mob-calc-btn" onclick="go('quote');toggleMob()">Price Calculator</button>
+  <button class="mob-quote-btn" onclick="go('contact');toggleMob()">Get a Free Quote</button>
+</div>
+
+<!-- ████ HOME ████ -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-tag"><div class="hero-tag-dot"></div>Family-Owned &middot; Established 2009</div>
+      <h1 class="hero-h1">Professional Cleaning You Can Rely On.</h1>
+      <p class="hero-sub">DS Cleaners delivers outstanding commercial and domestic cleaning services across the area. Trusted by over 500 homes and businesses for 15 years.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="go('quote')">Get an Instant Price</button>
+        <button class="hero-ghost" onclick="go('services')">View Our Services</button>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L9.8 5.8L15 6.2L11.2 9.5L12.5 14.7L8 12L3.5 14.7L4.8 9.5L1 6.2L6.2 5.8L8 1Z" fill="#fcc419"/></svg><span>5-star rated service</span></div>
+        <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 6C13 10 8 14 8 14S3 10 3 6c0-2.2 2.2-4 5-4s5 1.8 5 4z" stroke="rgba(255,255,255,.5)" stroke-width="1.4"/><path d="M6 6l1.5 1.5L10.5 4.5" stroke="rgba(255,255,255,.5)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Fully insured</span></div>
+        <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,.5)" stroke-width="1.4"/><path d="M8 5V8.5L10 10" stroke="rgba(255,255,255,.5)" stroke-width="1.4" stroke-linecap="round"/></svg><span>24-hour response</span></div>
+      </div>
+      <div class="hero-stats-bar">
+        <div class="stat-item"><div class="stat-n">15<span>+</span></div><div class="stat-l">Years in business</div></div>
+        <div class="stat-item"><div class="stat-n">500<span>+</span></div><div class="stat-l">Satisfied clients</div></div>
+        <div class="stat-item"><div class="stat-n">100<span>%</span></div><div class="stat-l">Satisfaction guarantee</div></div>
+        <div class="stat-item"><div class="stat-n">24<span>h</span></div><div class="stat-l">Quote response time</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust-bar"><div class="trust-bar-inner">
+    <div class="trust-pill"><div class="trust-pill-check"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 5L4 7L8 3" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>No hidden fees</div>
+    <div class="trust-pill"><div class="trust-pill-check"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 5L4 7L8 3" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Vetted &amp; insured staff</div>
+    <div class="trust-pill"><div class="trust-pill-check"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 5L4 7L8 3" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Eco-friendly products</div>
+    <div class="trust-pill"><div class="trust-pill-check"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 5L4 7L8 3" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Flexible scheduling</div>
+    <div class="trust-pill"><div class="trust-pill-check"><svg width="10" height="10" viewBox="0 0 10 10"><path d="M2 5L4 7L8 3" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Same-week availability</div>
+  </div></div>
+
+  <section class="sec"><div class="wrap">
+    <div class="hdr c"><div class="sec-pre">What We Offer</div><h2 class="sec-h2">Cleaning Services for Every Space</h2><p class="sec-body">From weekly home cleaning to full commercial contracts — delivered to the same high standard every time.</p></div>
+    <div class="services-grid">
+      <div class="svc-card"><div class="svc-img"><div class="svc-img-inner" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80')"></div><div class="svc-img-overlay"></div><div class="svc-tag-on-img">Residential</div></div><div class="svc-body"><div class="svc-name">Domestic Cleaning</div><p class="svc-desc">Regular or one-off home cleaning tailored to your property.</p><div class="svc-list"><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Weekly, fortnightly &amp; monthly</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Kitchen &amp; bathroom deep clean</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>End of tenancy available</span></div></div></div></div>
+      <div class="svc-card"><div class="svc-img"><div class="svc-img-inner" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80')"></div><div class="svc-img-overlay"></div><div class="svc-tag-on-img">Commercial</div></div><div class="svc-body"><div class="svc-name">Commercial Cleaning</div><p class="svc-desc">Flexible contracts keeping your business premises spotless.</p><div class="svc-list"><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Offices, retail &amp; hospitality</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>After-hours &amp; weekend slots</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Dedicated account manager</span></div></div></div></div>
+      <div class="svc-card"><div class="svc-img"><div class="svc-img-inner" style="background-image:url('https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=800&q=80')"></div><div class="svc-img-overlay"></div><div class="svc-tag-on-img">Intensive</div></div><div class="svc-body"><div class="svc-name">Deep Cleaning</div><p class="svc-desc">A thorough top-to-bottom clean — every surface and corner.</p><div class="svc-list"><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Inside cupboards &amp; appliances</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Oven &amp; extractor degreasing</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Post-renovation available</span></div></div></div></div>
+      <div class="svc-card"><div class="svc-img"><div class="svc-img-inner" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80')"></div><div class="svc-img-overlay"></div><div class="svc-tag-on-img">Move In / Out</div></div><div class="svc-body"><div class="svc-name">End of Tenancy</div><p class="svc-desc">Letting-agent standard cleaning to ensure a full deposit return.</p><div class="svc-list"><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Meets all agency checklists</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Carpet &amp; upholstery cleaning</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Deposit-back guarantee</span></div></div></div></div>
+    </div>
+  </div></section>
+
+  <section class="sec" style="background:var(--grey-50);border-top:1px solid var(--grey-200);border-bottom:1px solid var(--grey-200)"><div class="wrap">
+    <div class="hdr c"><div class="sec-pre">How It Works</div><h2 class="sec-h2">From enquiry to spotless — in four simple steps.</h2></div>
+    <div class="steps-grid">
+      <div class="step"><span class="step-num">Step 01</span><div class="step-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="3" stroke="#1c7ed6" stroke-width="1.5"/><path d="M7 10H13M7 7H13M7 13H10" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="step-title">Get an Instant Price</div><p class="step-desc">Use our price calculator — enter your rooms, bathrooms and service type. Get an estimate in seconds.</p></div>
+      <div class="step"><span class="step-num">Step 02</span><div class="step-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="step-title">Confirm Your Quote</div><p class="step-desc">We respond within 24 hours with a clear, transparent quote — no surprises.</p></div>
+      <div class="step"><span class="step-num">Step 03</span><div class="step-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="#1c7ed6" stroke-width="1.5"/><path d="M3 8h14M8 4V3M12 4V3" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="step-title">Choose a Date</div><p class="step-desc">Pick a time that suits you — mornings, evenings, or weekends. We fit around you.</p></div>
+      <div class="step"><span class="step-num">Step 04</span><div class="step-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 10L8.5 13.5L15 7" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="7" stroke="#1c7ed6" stroke-width="1.5"/></svg></div><div class="step-title">Enjoy the Result</div><p class="step-desc">Our team arrives and delivers a thorough, professional clean — every time.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec"><div class="wrap"><div class="feat-grid">
+    <div>
+      <div class="sec-pre">Why DS Cleaners</div>
+      <h2 class="sec-h2">A family business that treats your home like our own.</h2>
+      <p class="sec-body">Over 15 years we've built a reputation for doing things properly. No shortcuts. No hidden costs. Just a reliable team that shows up, does the job well, and leaves your space immaculate.</p>
+      <div class="feat-checklist">
+        <div class="feat-check-row"><div class="feat-check-box"><svg width="11" height="11" viewBox="0 0 11 11"><path d="M2 5.5L4.5 8L9 3" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="feat-check-text"><strong>15+ years of proven experience</strong><span>We know what works — refined over a decade and a half.</span></div></div>
+        <div class="feat-check-row"><div class="feat-check-box"><svg width="11" height="11" viewBox="0 0 11 11"><path d="M2 5.5L4.5 8L9 3" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="feat-check-text"><strong>Fully vetted and insured staff</strong><span>Every member is background-checked and fully covered.</span></div></div>
+        <div class="feat-check-row"><div class="feat-check-box"><svg width="11" height="11" viewBox="0 0 11 11"><path d="M2 5.5L4.5 8L9 3" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="feat-check-text"><strong>Transparent, upfront pricing</strong><span>We quote clearly before we start. What we say is what you pay.</span></div></div>
+      </div>
+      <div style="margin-top:36px;display:flex;gap:12px;flex-wrap:wrap;">
+        <button class="btn-primary" onclick="go('quote')">Get an Instant Price</button>
+        <button class="btn-secondary" onclick="go('about')">Our Story</button>
+      </div>
+    </div>
+    <div class="feat-visual">
+      <div class="feat-photo" style="background-image:url('https://images.unsplash.com/photo-1527515545081-5db817172677?w=900&q=80')"></div>
+      <div class="feat-badge"><div class="feat-badge-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2L10.5 6.5H15.5L11.5 9L13 13.5L9 11L5 13.5L6.5 9L2.5 6.5H7.5L9 2Z" fill="white" fill-opacity=".9"/></svg></div><div><div class="feat-badge-title">500+ Five-Star Reviews</div><div class="feat-badge-sub">From homeowners &amp; businesses</div></div></div>
+    </div>
+  </div></div></section>
+
+  <section class="sec reviews-sec"><div class="wrap">
+    <div class="hdr c"><div class="sec-pre">Client Reviews</div><h2 class="sec-h2">What our clients say</h2><p class="sec-body">Real feedback from the homes and businesses we clean every week.</p></div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="review-stars"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg></div><p class="review-text">"DS Cleaners have been cleaning our office for over two years. Always on time, incredibly thorough, and genuinely professional."</p><div class="review-author"><div class="review-av">JM</div><div><div class="review-name">James Mitchell</div><div class="review-meta">Office Manager &middot; Commercial Client</div></div></div></div>
+      <div class="review-card"><div class="review-stars"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg></div><p class="review-text">"I was blown away after their deep clean. Genuinely outstanding — I recommend them to everyone."</p><div class="review-author"><div class="review-av">SR</div><div><div class="review-name">Sarah Roberts</div><div class="review-meta">Homeowner &middot; Domestic Client</div></div></div></div>
+      <div class="review-card"><div class="review-stars"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg></div><p class="review-text">"Reliable, flexible and great value. We use DS Cleaners across all three of our retail units."</p><div class="review-author"><div class="review-av">TK</div><div><div class="review-name">Tom Kavanagh</div><div class="review-meta">Retail Owner &middot; Commercial Client</div></div></div></div>
+    </div>
+  </div></section>
+
+  <section class="sec"><div class="wrap"><div class="hdr c"><div class="sec-pre">FAQ</div><h2 class="sec-h2">Common Questions</h2></div><div class="faq-list" id="faqHome"></div></div></section>
+
+  <div class="cta-band"><div class="cta-band-inner"><div><h2>Ready for a spotless space?</h2><p>Get an instant price estimate — no obligation, no waiting.</p></div><div class="cta-band-btns"><button class="btn-primary" onclick="go('quote')">Get an Instant Price</button><button class="btn-outline-white" onclick="go('services')">View Services</button></div></div></div>
+
+  <footer><div class="footer-grid">
+    <div><div class="logo"><div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="logo-text">DS<span>Cleaners</span></div></div><p class="footer-brand-text">A family-owned cleaning company with 15+ years experience delivering spotless results across the UK.</p></div>
+    <div class="fc"><h4>Navigation</h4><ul><li onclick="go('home')">Home</li><li onclick="go('services')">Services</li><li onclick="go('about')">About Us</li><li onclick="go('gallery')">Gallery</li><li onclick="go('quote')">Price Calculator</li><li onclick="go('contact')">Get a Quote</li></ul></div>
+    <div class="fc"><h4>Services</h4><ul><li>Domestic Cleaning</li><li>Commercial Cleaning</li><li>Deep Cleaning</li><li>End of Tenancy</li></ul></div>
+    <div class="fc"><h4>Contact</h4><ul><li>+44 XXXX XXXXXX</li><li>info@dscleaners.com</li><li>Your Town, UK</li><li>Mon–Sat: 8am–6pm</li></ul></div>
+  </div><div class="footer-bottom"><span>&copy; 2024 DS Cleaners. All rights reserved.</span><span>Trusted family cleaning since 2009</span></div></footer>
+</div>
+
+<!-- ████ SERVICES PAGE ████ -->
+<div class="page" id="page-services">
+  <div class="page-hero"><div class="page-hero-inner"><div class="breadcrumb"><a onclick="go('home')">Home</a><span>/</span><strong>Services</strong></div><h1>Our Cleaning Services</h1><p>Every service delivered to the same rigorous standard — reliable, thorough, and professional.</p></div></div>
+  <section class="sec"><div class="wrap"><div class="services-grid">
+    <div class="svc-card"><div class="svc-img"><div class="svc-img-inner" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80')"></div><div class="svc-img-overlay"></div><div class="svc-tag-on-img">Residential</div></div><div class="svc-body"><div class="svc-name">Domestic Cleaning</div><p class="svc-desc">Regular or one-off cleaning tailored to your home and lifestyle. From weekly visits to a one-time spring clean.</p><div class="svc-list"><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Weekly, fortnightly &amp; monthly options</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Kitchen &amp; bathroom deep scrub</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Hoovering, mopping &amp; dusting</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Skirting boards &amp; window sills</span></div></div></div></div>
+    <div class="svc-card"><div class="svc-img"><div class="svc-img-inner" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80')"></div><div class="svc-img-overlay"></div><div class="svc-tag-on-img">Commercial</div></div><div class="svc-body"><div class="svc-name">Commercial Cleaning</div><p class="svc-desc">Flexible contracts for offices, retail and hospitality businesses. We work around your hours.</p><div class="svc-list"><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Offices, retail &amp; hospitality</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>After-hours &amp; weekend slots</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Dedicated account manager</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Communal area maintenance</span></div></div></div></div>
+    <div class="svc-card"><div class="svc-img"><div class="svc-img-inner" style="background-image:url('https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=800&q=80')"></div><div class="svc-img-overlay"></div><div class="svc-tag-on-img">Intensive</div></div><div class="svc-body"><div class="svc-name">Deep Cleaning</div><p class="svc-desc">A thorough reset — every surface, corner and hidden area covered. Perfect for spring cleans or post-renovation.</p><div class="svc-list"><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Inside cupboards &amp; appliances</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Tile &amp; grout scrubbing</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Oven &amp; extractor degreasing</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Post-renovation available</span></div></div></div></div>
+    <div class="svc-card"><div class="svc-img"><div class="svc-img-inner" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80')"></div><div class="svc-img-overlay"></div><div class="svc-tag-on-img">Move In / Out</div></div><div class="svc-body"><div class="svc-name">End of Tenancy</div><p class="svc-desc">Letting-agent standard clean to secure your full deposit return.</p><div class="svc-list"><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Meets all agency checklists</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Carpet &amp; upholstery cleaning</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Walls, skirting &amp; switches</span></div><div class="svc-row"><div class="svc-check"><svg width="9" height="9" viewBox="0 0 9 9"><path d="M1.5 4.5L3.5 6.5L7.5 2.5" stroke="#1c7ed6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Deposit-back guarantee</span></div></div></div></div>
+  </div></div></section>
+  <div class="cta-band"><div class="cta-band-inner"><div><h2>Not sure which service you need?</h2><p>Use our price calculator or talk to us — we'll recommend the right option.</p></div><div class="cta-band-btns"><button class="btn-primary" onclick="go('quote')">Get an Instant Price</button><button class="btn-outline-white" onclick="go('contact')">Contact Us</button></div></div></div>
+  <footer><div class="footer-grid"><div><div class="logo"><div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="logo-text">DS<span>Cleaners</span></div></div><p class="footer-brand-text">Family-owned. 15+ years of spotless results.</p></div><div class="fc"><h4>Navigation</h4><ul><li onclick="go('home')">Home</li><li onclick="go('services')">Services</li><li onclick="go('about')">About</li><li onclick="go('gallery')">Gallery</li><li onclick="go('quote')">Price Calculator</li><li onclick="go('contact')">Get a Quote</li></ul></div><div class="fc"><h4>Services</h4><ul><li>Domestic</li><li>Commercial</li><li>Deep Cleaning</li><li>End of Tenancy</li></ul></div><div class="fc"><h4>Contact</h4><ul><li>+44 XXXX XXXXXX</li><li>info@dscleaners.com</li><li>Mon–Sat: 8am–6pm</li></ul></div></div><div class="footer-bottom"><span>&copy; 2024 DS Cleaners. All rights reserved.</span></div></footer>
+</div>
+
+<!-- ████ ABOUT PAGE ████ -->
+<div class="page" id="page-about">
+  <div class="page-hero"><div class="page-hero-inner"><div class="breadcrumb"><a onclick="go('home')">Home</a><span>/</span><strong>About Us</strong></div><h1>Family Values, Professional Results.</h1><p>DS Cleaners was built on a simple idea — to clean every space with the care and attention you'd want for your own home.</p></div></div>
+  <section class="sec"><div class="wrap"><div class="about-split">
+    <div class="about-photo-wrap"><div class="about-photo"></div><div class="about-overlay-card"><div class="aoc-n">15<span>+</span></div><div class="aoc-l">Years in business</div></div></div>
+    <div>
+      <div class="sec-pre">Our Story</div>
+      <h2 class="sec-h2">More than just a cleaning company.</h2>
+      <p class="sec-body" style="margin-bottom:16px">DS Cleaners was founded over 15 years ago with a straightforward mission: to provide the kind of thorough, trustworthy cleaning service we'd want for our own home. What started as a small domestic operation has grown into a full-service company trusted by hundreds of homes and businesses.</p>
+      <p style="font-size:.95rem;color:var(--grey-600);line-height:1.8;margin-bottom:28px">We still operate with those same family values at our core — honesty, hard work, and genuine care for every client. Every team member is personally trained, vetted, and shares our commitment to excellence.</p>
+      <div class="about-values">
+        <div class="val-box"><div class="val-label">Trust</div><div class="val-text">All staff are vetted, reference-checked and fully insured.</div></div>
+        <div class="val-box"><div class="val-label">Quality</div><div class="val-text">High standards on every job, every time — no exceptions.</div></div>
+        <div class="val-box"><div class="val-label">Eco-Friendly</div><div class="val-text">Safe, environmentally responsible products throughout.</div></div>
+        <div class="val-box"><div class="val-label">Responsive</div><div class="val-text">We reply to every enquiry within 24 hours, guaranteed.</div></div>
+      </div>
+      <div style="margin-top:32px"><button class="btn-primary" onclick="go('contact')">Work With Us</button></div>
+    </div>
+  </div></div></section>
+  <section class="sec" style="background:var(--grey-50);border-top:1px solid var(--grey-200)"><div class="wrap">
+    <div class="hdr c"><div class="sec-pre">The Team</div><h2 class="sec-h2">The people behind the polish.</h2><p class="sec-body">Every member of DS Cleaners is trained to our standards and treats your property with complete respect.</p></div>
+    <div class="team-grid">
+      <div class="team-card"><div class="team-av">DS</div><div class="team-name">David &amp; Sandra</div><div class="team-role">Founders</div><p class="team-bio">The family duo who started it all. Over 15 years of hands-on experience — they set the standard for every clean DS delivers.</p></div>
+      <div class="team-card"><div class="team-av">OP</div><div class="team-name">Operations Lead</div><div class="team-role">Coordinator</div><p class="team-bio">Ensures every job runs on time and to the high standard our clients expect. The backbone of daily operations.</p></div>
+      <div class="team-card"><div class="team-av">CT</div><div class="team-name">Commercial Team</div><div class="team-role">Commercial Division</div><p class="team-bio">Our dedicated squad handles everything from small offices to large retail premises — always professionally.</p></div>
+    </div>
+  </div></section>
+  <div class="cta-band"><div class="cta-band-inner"><div><h2>Let's work together.</h2><p>We'd love to discuss your needs — no obligation, just a friendly conversation.</p></div><div class="cta-band-btns"><button class="btn-primary" onclick="go('contact')">Get in Touch</button></div></div></div>
+  <footer><div class="footer-grid"><div><div class="logo"><div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="logo-text">DS<span>Cleaners</span></div></div><p class="footer-brand-text">Family-owned. 15+ years of spotless results.</p></div><div class="fc"><h4>Navigation</h4><ul><li onclick="go('home')">Home</li><li onclick="go('services')">Services</li><li onclick="go('about')">About</li><li onclick="go('gallery')">Gallery</li><li onclick="go('quote')">Price Calculator</li><li onclick="go('contact')">Get a Quote</li></ul></div><div class="fc"><h4>Services</h4><ul><li>Domestic</li><li>Commercial</li><li>Deep Cleaning</li><li>End of Tenancy</li></ul></div><div class="fc"><h4>Contact</h4><ul><li>+44 XXXX XXXXXX</li><li>info@dscleaners.com</li></ul></div></div><div class="footer-bottom"><span>&copy; 2024 DS Cleaners. All rights reserved.</span></div></footer>
+</div>
+
+<!-- ████ GALLERY PAGE ████ -->
+<div class="page" id="page-gallery">
+  <div class="page-hero"><div class="page-hero-inner"><div class="breadcrumb"><a onclick="go('home')">Home</a><span>/</span><strong>Gallery</strong></div><h1>Our Work</h1><p>Results from domestic and commercial cleans. Replace the placeholder cells with your own before &amp; after photos.</p></div></div>
+  <section class="sec"><div class="wrap">
+    <div class="filter-bar">
+      <button class="f-btn active" onclick="galFilter('all',this)">All</button>
+      <button class="f-btn" onclick="galFilter('domestic',this)">Domestic</button>
+      <button class="f-btn" onclick="galFilter('commercial',this)">Commercial</button>
+      <button class="f-btn" onclick="galFilter('deep',this)">Deep Clean</button>
+    </div>
+    <div class="gallery-mosaic" id="galGrid"></div>
+    <div style="margin-top:32px;padding:28px;background:var(--grey-50);border:1.5px dashed var(--grey-300);border-radius:var(--radius-lg);text-align:center"><div style="font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:6px">Add Your Photos Here</div><p style="font-size:.82rem;color:var(--grey-600);max-width:380px;margin:0 auto">Replace the placeholders above with real before &amp; after images to build trust with potential clients.</p></div>
+  </div></section>
+  <div class="cta-band"><div class="cta-band-inner"><div><h2>Like what you see?</h2><p>Book DS Cleaners and we'll deliver these results in your space.</p></div><div class="cta-band-btns"><button class="btn-primary" onclick="go('quote')">Get an Instant Price</button></div></div></div>
+  <footer><div class="footer-grid"><div><div class="logo"><div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="logo-text">DS<span>Cleaners</span></div></div><p class="footer-brand-text">Family-owned. 15+ years of spotless results.</p></div><div class="fc"><h4>Navigation</h4><ul><li onclick="go('home')">Home</li><li onclick="go('services')">Services</li><li onclick="go('about')">About</li><li onclick="go('gallery')">Gallery</li><li onclick="go('quote')">Price Calculator</li><li onclick="go('contact')">Get a Quote</li></ul></div><div class="fc"><h4>Services</h4><ul><li>Domestic</li><li>Commercial</li><li>Deep Cleaning</li><li>End of Tenancy</li></ul></div><div class="fc"><h4>Contact</h4><ul><li>+44 XXXX XXXXXX</li><li>info@dscleaners.com</li></ul></div></div><div class="footer-bottom"><span>&copy; 2024 DS Cleaners. All rights reserved.</span></div></footer>
+</div>
+
+<!-- ████ PRICE CALCULATOR PAGE ████ -->
+<div class="page" id="page-quote">
+  <div class="page-hero"><div class="page-hero-inner"><div class="breadcrumb"><a onclick="go('home')">Home</a><span>/</span><strong>Price Calculator</strong></div><h1>Get an Instant Price</h1><p>Enter your details below for an immediate estimate. No sign-up, no obligation — we confirm the final price before anything is booked.</p></div></div>
+
+  <section class="sec" style="background:var(--grey-50);border-bottom:1px solid var(--grey-200)"><div class="wrap">
+    <div class="calc-layout">
+
+      <!-- LEFT: calculator -->
+      <div>
+        <div class="calc-card">
+
+          <!-- 1. Service type -->
+          <div class="calc-section">
+            <div class="calc-section-title">1. Choose your service</div>
+            <div class="service-pills">
+              <button class="service-pill active" data-service="standard" onclick="selectService(this)">
+                <span class="service-pill-name">Standard Clean</span>
+                <span class="service-pill-rate">£21/hr &middot; 2–3 hrs base</span>
+              </button>
+              <button class="service-pill" data-service="deep" onclick="selectService(this)">
+                <span class="service-pill-name">Deep Clean</span>
+                <span class="service-pill-rate">£27/hr &middot; 4 hr minimum</span>
+              </button>
+              <button class="service-pill" data-service="tenancy" onclick="selectService(this)">
+                <span class="service-pill-name">End of Tenancy</span>
+                <span class="service-pill-rate">£27/hr &middot; 4 hr minimum</span>
+              </button>
+              <button class="service-pill" data-service="commercial" onclick="selectService(this)">
+                <span class="service-pill-name">Commercial</span>
+                <span class="service-pill-rate">£21/hr &middot; Tailored quote</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 2. Rooms -->
+          <div class="calc-section">
+            <div class="calc-section-title">2. Property details</div>
+            <div class="stepper-grid">
+              <div>
+                <span class="stepper-label">Bedrooms</span>
+                <div class="stepper">
+                  <button class="stepper-btn" onclick="stepChange('beds',-1)">&#8722;</button>
+                  <span class="stepper-val" id="beds-val">1</span>
+                  <button class="stepper-btn" onclick="stepChange('beds',1)">+</button>
+                </div>
+              </div>
+              <div>
+                <span class="stepper-label">Bathrooms</span>
+                <div class="stepper">
+                  <button class="stepper-btn" onclick="stepChange('baths',-1)">&#8722;</button>
+                  <span class="stepper-val" id="baths-val">1</span>
+                  <button class="stepper-btn" onclick="stepChange('baths',1)">+</button>
+                </div>
+              </div>
+            </div>
+            <p style="font-size:.78rem;color:var(--grey-600);margin-top:12px">Each extra bedroom or bathroom adds 45 minutes to the estimated duration.</p>
+          </div>
+
+          <!-- 3. Add-ons -->
+          <div class="calc-section">
+            <div class="calc-section-title">3. Add-ons (optional)</div>
+            <div class="addon-list">
+              <div class="addon-item" data-addon="oven" onclick="toggleAddon(this)">
+                <div class="addon-left">
+                  <div class="addon-check"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5L4.5 8L9 3" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                  <div>
+                    <div class="addon-name">Oven Clean</div>
+                    <div style="font-size:.75rem;color:var(--grey-600)">Full internal oven clean &amp; degrease</div>
+                  </div>
+                </div>
+                <span class="addon-price">+£68</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Postcode -->
+          <div class="calc-section">
+            <div class="calc-section-title">4. Your postcode <span style="font-weight:500;text-transform:none;letter-spacing:0;color:var(--grey-600)">(optional)</span></div>
+            <div class="postcode-input-row">
+              <input type="text" id="postcodeInput" placeholder="e.g. LE11 3TU" maxlength="8" oninput="onPostcodeInput(this)" autocomplete="off"/>
+              <button class="postcode-lookup-btn" id="postcodeBtn" onclick="lookupPostcode()">Check</button>
+            </div>
+            <div class="postcode-result" id="postcodeResult"></div>
+            <p style="font-size:.78rem;color:var(--grey-600);margin-top:10px">Enter your postcode to confirm we cover your area.</p>
+          </div>
+
+        </div>
+
+        <!-- Details form (shown after "Book This Clean") -->
+        <div class="details-form" id="detailsForm">
+          <div class="details-form-title">Send me this quote</div>
+          <p class="details-form-sub">Pop in your details and we'll send a confirmed quote with availability within 24 hours.</p>
+          <div id="dfContent">
+            <form id="dfForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" onsubmit="doSubmitCalc(event)">
+              <input type="hidden" name="_subject" value="Calculator Quote Request – DS Cleaners"/>
+              <input type="hidden" name="quote_summary" id="quoteSummaryField"/>
+              <div class="f-row">
+                <div class="f-g"><label>First Name <em>*</em></label><input type="text" name="first_name" placeholder="John" required/></div>
+                <div class="f-g"><label>Last Name <em>*</em></label><input type="text" name="last_name" placeholder="Smith" required/></div>
+              </div>
+              <div class="f-g"><label>Email <em>*</em></label><input type="email" name="email" placeholder="john@email.com" required/></div>
+              <div class="f-g"><label>Phone</label><input type="tel" name="phone" placeholder="+44 XXXX XXXXXX"/></div>
+              <div class="f-g"><label>Additional notes</label><textarea name="notes" placeholder="Preferred dates, access details, anything else..." style="min-height:80px"></textarea></div>
+              <input type="text" name="_gotcha" style="display:none"/>
+              <button type="submit" class="f-submit" id="dfBtn">Send Quote Request</button>
+              <p class="f-note">We respond within 24 hours. Your details are never shared.</p>
+            </form>
+          </div>
+          <div class="f-success" id="dfSuccess">
+            <div class="f-success-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14L11 19L22 9" stroke="#2f9e44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Quote Request Sent!</h3>
+            <p>We'll review your details and respond within 24 hours with confirmed availability and pricing.</p>
+            <button class="btn-primary" onclick="resetCalcForm()">Start a New Estimate</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: live quote panel -->
+      <div>
+        <div class="quote-panel" id="quotePanel">
+          <div class="quote-panel-title">&#128200; Your Estimate</div>
+          <div id="quoteSummary">
+            <div class="quote-empty">
+              <div class="quote-empty-icon">&#129529;</div>
+              <p class="quote-empty-text">Select a service type above to see your instant price estimate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div></section>
+
+  <div class="cta-band"><div class="cta-band-inner"><div><h2>Prefer to speak to us?</h2><p>Call or email and we'll put together a tailored quote for you.</p></div><div class="cta-band-btns"><button class="btn-primary" onclick="go('contact')">Contact Us</button></div></div></div>
+  <footer><div class="footer-grid"><div><div class="logo"><div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="logo-text">DS<span>Cleaners</span></div></div><p class="footer-brand-text">Family-owned. 15+ years of spotless results.</p></div><div class="fc"><h4>Navigation</h4><ul><li onclick="go('home')">Home</li><li onclick="go('services')">Services</li><li onclick="go('about')">About</li><li onclick="go('gallery')">Gallery</li><li onclick="go('quote')">Price Calculator</li><li onclick="go('contact')">Get a Quote</li></ul></div><div class="fc"><h4>Services</h4><ul><li>Domestic</li><li>Commercial</li><li>Deep Cleaning</li><li>End of Tenancy</li></ul></div><div class="fc"><h4>Contact</h4><ul><li>+44 XXXX XXXXXX</li><li>info@dscleaners.com</li><li>Mon–Sat: 8am–6pm</li></ul></div></div><div class="footer-bottom"><span>&copy; 2024 DS Cleaners. All rights reserved.</span></div></footer>
+</div>
+
+<!-- ████ CONTACT PAGE ████ -->
+<div class="page" id="page-contact">
+  <div class="page-hero"><div class="page-hero-inner"><div class="breadcrumb"><a onclick="go('home')">Home</a><span>/</span><strong>Get a Quote</strong></div><h1>Get a Free Quote</h1><p>Fill in the form and we'll respond within 24 hours with a clear, no-obligation price.</p></div></div>
+  <section class="sec" style="background:var(--grey-50)"><div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <div class="c-row"><div class="c-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3h3l1.5 3.5L6 8s1 2 2 3 3 2 3 2l1.5-1.5L16 13v3s-1 1-3 0C8 14 2 8 2 3c-1-2 0-3 0-3z" stroke="#1c7ed6" stroke-width="1.2" stroke-linejoin="round"/></svg></div><div><div class="c-label">Phone</div><div class="c-val">+44 XXXX XXXXXX</div></div></div>
+        <div class="c-row"><div class="c-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="9" rx="1.5" stroke="#1c7ed6" stroke-width="1.2"/><path d="M2 5l6 4.5L14 5" stroke="#1c7ed6" stroke-width="1.2" stroke-linecap="round"/></svg></div><div><div class="c-label">Email</div><div class="c-val">info@dscleaners.com</div></div></div>
+        <div class="c-row"><div class="c-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.79 2 4 3.79 4 6c0 3.5 4 8 4 8s4-4.5 4-8c0-2.21-1.79-4-4-4z" stroke="#1c7ed6" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" fill="#1c7ed6"/></svg></div><div><div class="c-label">Location</div><div class="c-val">Your Town, United Kingdom</div></div></div>
+        <div class="c-row"><div class="c-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#1c7ed6" stroke-width="1.2"/><path d="M8 5v3.5l2 1.5" stroke="#1c7ed6" stroke-width="1.2" stroke-linecap="round"/></svg></div><div><div class="c-label">Hours</div><div class="c-val">Mon–Sat: 8am–6pm</div></div></div>
+        <div class="c-promise"><div class="c-promise-title">24-Hour Response Guarantee</div><div class="c-promise-text">We respond to every enquiry within 24 hours. For urgent bookings, call us directly.</div></div>
+      </div>
+      <div class="form-wrap">
+        <div id="fContent">
+          <div class="form-title">Request Your Free Quote</div>
+          <p class="form-sub">No obligation. We reply within 24 hours.</p>
+          <form id="qForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" onsubmit="doSubmit(event)">
+            <input type="hidden" name="_subject" value="New Quote Request – DS Cleaners"/>
+            <div class="f-row"><div class="f-g"><label>First Name <em>*</em></label><input type="text" name="first_name" placeholder="John" required/></div><div class="f-g"><label>Last Name <em>*</em></label><input type="text" name="last_name" placeholder="Smith" required/></div></div>
+            <div class="f-g"><label>Email Address <em>*</em></label><input type="email" name="email" placeholder="john@email.com" required/></div>
+            <div class="f-g"><label>Phone Number</label><input type="tel" name="phone" placeholder="+44 XXXX XXXXXX"/></div>
+            <div class="f-g"><label>Service Required <em>*</em></label><select name="service" required><option value="" disabled selected>Select a service...</option><option>Domestic Cleaning</option><option>Commercial Cleaning</option><option>Deep Cleaning</option><option>End of Tenancy</option><option>Other / Not Sure</option></select></div>
+            <div class="f-row"><div class="f-g"><label>Property Type</label><select name="property_type"><option value="" disabled selected>Property type...</option><option>Flat / Apartment</option><option>House</option><option>Office</option><option>Retail Unit</option><option>Other</option></select></div><div class="f-g"><label>Frequency</label><select name="frequency"><option value="" disabled selected>How often?</option><option>One-Off</option><option>Weekly</option><option>Fortnightly</option><option>Monthly</option><option>Regular Contract</option></select></div></div>
+            <div class="f-g"><label>Town / Postcode</label><input type="text" name="location" placeholder="e.g. Leicester, LE11 3TU"/></div>
+            <div class="f-g"><label>Additional Details</label><textarea name="message" placeholder="Property size, special requirements, preferred dates..."></textarea></div>
+            <input type="text" name="_gotcha" style="display:none"/>
+            <button type="submit" class="f-submit" id="fBtn">Send Quote Request</button>
+            <p class="f-note">Your information is kept confidential and never shared with third parties.</p>
+          </form>
+        </div>
+        <div class="f-success" id="fSuccess"><div class="f-success-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14L11 19L22 9" stroke="#2f9e44" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Quote Request Received</h3><p>Thank you. We'll review your details and respond within 24 hours with a clear, no-obligation quote.</p><button class="btn-primary" onclick="resetForm()">Send Another Request</button></div>
+      </div>
+    </div>
+  </div></section>
+  <footer><div class="footer-grid"><div><div class="logo"><div class="logo-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1.5L15.5 5.25V12.75L9 16.5L2.5 12.75V5.25L9 1.5Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div class="logo-text">DS<span>Cleaners</span></div></div><p class="footer-brand-text">Family-owned. 15+ years of spotless results.</p></div><div class="fc"><h4>Navigation</h4><ul><li onclick="go('home')">Home</li><li onclick="go('services')">Services</li><li onclick="go('about')">About</li><li onclick="go('gallery')">Gallery</li><li onclick="go('quote')">Price Calculator</li><li onclick="go('contact')">Get a Quote</li></ul></div><div class="fc"><h4>Services</h4><ul><li>Domestic</li><li>Commercial</li><li>Deep Cleaning</li><li>End of Tenancy</li></ul></div><div class="fc"><h4>Contact</h4><ul><li>+44 XXXX XXXXXX</li><li>info@dscleaners.com</li><li>Mon–Sat: 8am–6pm</li></ul></div></div><div class="footer-bottom"><span>&copy; 2024 DS Cleaners. All rights reserved.</span></div></footer>
+</div>
+
+<script>
+/* ══ PRICING CONFIG ══ easy to update ══ */
+const PRICING = {
+  standard:   { ratePerHr: 21, baseHrsMin: 2, baseHrsMax: 3 },
+  deep:       { ratePerHr: 27, baseHrsMin: 4, baseHrsMax: 4 },
+  tenancy:    { ratePerHr: 27, baseHrsMin: 4, baseHrsMax: 4 },
+  commercial: { ratePerHr: 21, baseHrsMin: 2, baseHrsMax: 3, enquiryOnly: true }
+};
+const EXTRA_HRS  = 0.75;  /* 45 mins per extra bed or bath */
+const ADDON_OVEN = 68;    /* fixed price */
+
+/* ══ STATE ══ */
+let calc = { service:'standard', beds:1, baths:1, addons:new Set(), postcode:'', postcodeValid:null, postcodeArea:'' };
+
+/* ══ NAV ══ */
+function go(id) {
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav-links button').forEach(b=>b.classList.remove('active'));
+  const nb=document.getElementById('n-'+id); if(nb) nb.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  const titles={home:'DS Cleaners | Professional Cleaning Services',services:'Services | DS Cleaners',about:'About Us | DS Cleaners',gallery:'Gallery | DS Cleaners',quote:'Price Calculator | DS Cleaners',contact:'Get a Free Quote | DS Cleaners'};
+  document.title=titles[id]||'DS Cleaners';
+}
+function toggleMob(){document.getElementById('mobMenu').classList.toggle('open');}
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobMenu'),h=document.querySelector('.hamburger');
+  if(m.classList.contains('open')&&!m.contains(e.target)&&!h.contains(e.target)) m.classList.remove('open');
+});
+
+/* ══ FAQ ══ */
+const faqs=[
+  {q:'How much does a professional clean cost?',a:'Our standard cleaning starts from £21/hr with a 2–3 hour base. Deep cleans and end of tenancy start from £27/hr with a 4-hour minimum. Use our price calculator for an instant estimate tailored to your property.'},
+  {q:'Do I need to provide cleaning products or equipment?',a:'No. Our team arrives fully equipped with professional-grade, eco-friendly cleaning products and all necessary tools.'},
+  {q:'How often should I have my property cleaned?',a:'For most homes, a fortnightly clean works well. High-traffic properties or offices may benefit from weekly visits. We\'re happy to advise.'},
+  {q:'Are your staff vetted and insured?',a:'Yes. Every member of our team is background-checked, reference-verified, and fully insured — giving you complete peace of mind.'},
+  {q:'Can I book a same-week clean?',a:'In many cases yes. Contact us and we\'ll do our best to accommodate urgent or short-notice bookings.'},
+];
+function buildFaq(cid){
+  const c=document.getElementById(cid); if(!c) return;
+  c.innerHTML=faqs.map((f,i)=>`<div class="faq-item" id="fi-${cid}-${i}"><button class="faq-q" onclick="toggleFaq('${cid}',${i})">${f.q}<div class="faq-icon"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2v6" stroke="#0c1e35" stroke-width="1.5" stroke-linecap="round"/></svg></div></button><div class="faq-a">${f.a}</div></div>`).join('');
+}
+function toggleFaq(c,i){document.getElementById(`fi-${c}-${i}`).classList.toggle('open');}
+buildFaq('faqHome');
+
+/* ══ GALLERY ══ */
+const galData=[
+  {cat:'domestic',label:'Kitchen Clean',tall:true},{cat:'commercial',label:'Office Space',wide:true},
+  {cat:'deep',label:'Bathroom Deep Clean'},{cat:'domestic',label:'Living Room'},
+  {cat:'commercial',label:'Retail Unit'},{cat:'deep',label:'Full Property Reset',tall:true},
+  {cat:'domestic',label:'End of Tenancy',wide:true},{cat:'commercial',label:'Communal Areas'},
+  {cat:'deep',label:'Post-Renovation'},
+];
+function renderGal(f){
+  const g=document.getElementById('galGrid'); if(!g) return;
+  const d=f==='all'?galData:galData.filter(i=>i.cat===f);
+  g.innerHTML=d.map(i=>`<div class="gal-cell${i.tall?' tall':''}${i.wide?' wide':''}"><div class="gal-empty"><div class="gal-empty-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="3" stroke="#ced4da" stroke-width="1.3"/><circle cx="7" cy="7" r="1.5" fill="#ced4da"/><path d="M2 13l4-4 3 3 2-2 5 5" stroke="#ced4da" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="gal-empty-text">Add Photo</div></div><div class="gal-overlay"><div class="gal-label">${i.label}</div></div></div>`).join('');
+}
+function galFilter(f,btn){
+  document.querySelectorAll('.f-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active'); renderGal(f);
+}
+renderGal('all');
+
+/* ══ CONTACT FORM ══ */
+async function doSubmit(e){
+  e.preventDefault();
+  const btn=document.getElementById('fBtn');
+  btn.textContent='Sending...'; btn.disabled=true;
+  try{
+    const r=await fetch(e.target.action,{method:'POST',body:new FormData(e.target),headers:{Accept:'application/json'}});
+    if(r.ok){document.getElementById('fContent').style.display='none';document.getElementById('fSuccess').style.display='block';}
+    else{btn.textContent='Send Quote Request';btn.disabled=false;alert('Something went wrong. Please try again or call us directly.');}
+  }catch{btn.textContent='Send Quote Request';btn.disabled=false;alert('Network error. Please check your connection.');}
+}
+function resetForm(){
+  document.getElementById('qForm').reset();
+  document.getElementById('fContent').style.display='block';
+  document.getElementById('fSuccess').style.display='none';
+  document.getElementById('fBtn').textContent='Send Quote Request';
+  document.getElementById('fBtn').disabled=false;
+}
+
+/* ══════════════════════════════════════════
+   PRICE CALCULATOR
+══════════════════════════════════════════ */
+
+function selectService(btn){
+  document.querySelectorAll('.service-pill').forEach(p=>p.classList.remove('active'));
+  btn.classList.add('active');
+  calc.service=btn.dataset.service;
+  updateQuote();
+}
+
+function stepChange(field,delta){
+  const max=field==='beds'?8:5;
+  const el=document.getElementById(field+'-val');
+  let v=parseInt(el.textContent)+delta;
+  v=Math.max(1,Math.min(max,v));
+  el.textContent=v;
+  calc[field==='beds'?'beds':'baths']=v;
+  updateQuote();
+}
+
+function toggleAddon(el){
+  el.classList.toggle('active');
+  const k=el.dataset.addon;
+  calc.addons.has(k)?calc.addons.delete(k):calc.addons.add(k);
+  updateQuote();
+}
+
+/* Postcode lookup via postcodes.io (free, no API key) */
+function onPostcodeInput(inp){
+  inp.value=inp.value.toUpperCase().replace(/[^A-Z0-9 ]/g,'');
+  calc.postcode=inp.value.trim();
+  calc.postcodeValid=null; calc.postcodeArea='';
+  const r=document.getElementById('postcodeResult');
+  r.className='postcode-result'; r.textContent='';
+}
+
+async function lookupPostcode(){
+  const pc=calc.postcode.replace(/\s/g,'');
+  if(pc.length<5){showPcResult('err','Please enter a valid UK postcode.');return;}
+  const btn=document.getElementById('postcodeBtn');
+  btn.textContent='Checking...'; btn.disabled=true;
+  try{
+    const res=await fetch(`https://api.postcodes.io/postcodes/${encodeURIComponent(pc)}`);
+    const data=await res.json();
+    if(data.status===200){
+      const area=data.result.admin_district||data.result.parliamentary_constituency||data.result.postcode;
+      calc.postcodeValid=true; calc.postcodeArea=area;
+      showPcResult('ok',`\u2713 ${data.result.postcode} \u2014 ${area}`);
+    }else{
+      calc.postcodeValid=false;
+      showPcResult('err','Postcode not found. Please check and try again.');
+    }
+  }catch{
+    calc.postcodeValid=false;
+    showPcResult('err','Could not verify postcode. Please try again.');
+  }
+  btn.textContent='Check'; btn.disabled=false;
+  updateQuote();
+}
+
+function showPcResult(type,msg){
+  const el=document.getElementById('postcodeResult');
+  el.className='postcode-result '+type; el.textContent=msg;
+}
+
+/* Core pricing calculation */
+function calcPrice(){
+  const svc=PRICING[calc.service];
+  const extraBeds=Math.max(0,calc.beds-1);
+  const extraBaths=Math.max(0,calc.baths-1);
+  const extraHrs=(extraBeds+extraBaths)*EXTRA_HRS;
+  const hrsMin=svc.baseHrsMin+extraHrs;
+  const hrsMax=svc.baseHrsMax+extraHrs;
+  const cleanMin=hrsMin*svc.ratePerHr;
+  const cleanMax=hrsMax*svc.ratePerHr;
+  let addonsTotal=0;
+  if(calc.addons.has('oven')) addonsTotal+=ADDON_OVEN;
+  return{svc,hrsMin,hrsMax,cleanMin,cleanMax,addonsTotal,totalMin:cleanMin+addonsTotal,totalMax:cleanMax+addonsTotal,enquiryOnly:!!svc.enquiryOnly};
+}
+
+function fmtHrs(h){
+  const wh=Math.floor(h); const wm=Math.round((h-wh)*60);
+  if(wm===0) return wh+' hr'+(wh!==1?'s':'');
+  if(wh===0) return wm+' min';
+  return wh+'h '+wm+'m';
+}
+
+function updateQuote(){
+  const p=calcPrice();
+  const panel=document.getElementById('quoteSummary');
+  const labels={standard:'Standard Clean',deep:'Deep Clean',tenancy:'End of Tenancy',commercial:'Commercial'};
+
+  if(p.enquiryOnly){
+    panel.innerHTML=`
+      <div class="quote-line"><span class="quote-line-label">Service</span><span class="quote-line-val">Commercial Clean</span></div>
+      <div class="quote-line"><span class="quote-line-label">Rate</span><span class="quote-line-val">£21/hr</span></div>
+      <div style="margin-top:20px;padding:16px;background:var(--blue-pale);border-radius:10px;font-size:.85rem;color:var(--navy);line-height:1.65">
+        <strong>Commercial pricing is tailored</strong> to your premises size, frequency and requirements. Use the contact form for a personalised quote.
+      </div>
+      <button class="quote-cta" onclick="go('contact')">Request Commercial Quote &rarr;</button>`;
+    document.getElementById('detailsForm').classList.remove('show');
+    return;
+  }
+
+  const sameRange=p.hrsMin===p.hrsMax;
+  const durText=sameRange?fmtHrs(p.hrsMin):fmtHrs(p.hrsMin)+' \u2013 '+fmtHrs(p.hrsMax);
+  const addonLine=calc.addons.has('oven')?`<div class="quote-line"><span class="quote-line-label">Oven clean</span><span class="quote-line-val">+&pound;${ADDON_OVEN}</span></div>`:'';
+  const priceFrom='\u00a3'+Math.round(p.totalMin);
+  const rangeText=sameRange?'Fixed estimate':'Range: \u00a3'+Math.round(p.totalMin)+' \u2013 \u00a3'+Math.round(p.totalMax);
+  const pcLine=calc.postcodeValid?`<div style="margin-top:10px;font-size:.8rem;color:var(--green);font-weight:600;">\u2713 We cover ${calc.postcodeArea||calc.postcode}</div>`:'';
+
+  panel.innerHTML=`
+    <div class="quote-line"><span class="quote-line-label">Service</span><span class="quote-line-val">${labels[calc.service]}</span></div>
+    <div class="quote-line"><span class="quote-line-label">Bedrooms</span><span class="quote-line-val">${calc.beds}</span></div>
+    <div class="quote-line"><span class="quote-line-label">Bathrooms</span><span class="quote-line-val">${calc.baths}</span></div>
+    <div class="quote-line"><span class="quote-line-label">Est. duration</span><span class="quote-line-val">${durText}</span></div>
+    <div class="quote-line"><span class="quote-line-label">Rate</span><span class="quote-line-val">&pound;${p.svc.ratePerHr}/hr</span></div>
+    ${addonLine}
+    <div class="quote-total">
+      <div><div class="quote-total-label">Estimated total</div><div class="quote-range">${rangeText}</div></div>
+      <div class="quote-total-price">${priceFrom}<span>+</span></div>
+    </div>
+    ${pcLine}
+    <p class="quote-disclaimer">Estimate based on your inputs. Final price confirmed before booking. No hidden fees.</p>
+    <button class="quote-cta" onclick="showDetailsForm()">Book This Clean &rarr;</button>`;
+
+  /* pre-fill hidden summary */
+  const sf=document.getElementById('quoteSummaryField');
+  if(sf) sf.value=`Service: ${labels[calc.service]}, Beds: ${calc.beds}, Baths: ${calc.baths}, Addons: ${[...calc.addons].join(', ')||'none'}, Estimate: £${Math.round(p.totalMin)}–£${Math.round(p.totalMax)}, Postcode: ${calc.postcode}`;
+}
+
+function showDetailsForm(){
+  const df=document.getElementById('detailsForm');
+  df.classList.add('show');
+  setTimeout(()=>df.scrollIntoView({behavior:'smooth',block:'start'}),50);
+}
+
+async function doSubmitCalc(e){
+  e.preventDefault();
+  const btn=document.getElementById('dfBtn');
+  btn.textContent='Sending...'; btn.disabled=true;
+  try{
+    const r=await fetch(e.target.action,{method:'POST',body:new FormData(e.target),headers:{Accept:'application/json'}});
+    if(r.ok){document.getElementById('dfContent').style.display='none';document.getElementById('dfSuccess').style.display='block';}
+    else{btn.textContent='Send Quote Request';btn.disabled=false;alert('Something went wrong. Please try again.');}
+  }catch{btn.textContent='Send Quote Request';btn.disabled=false;alert('Network error.');}
+}
+
+function resetCalcForm(){
+  document.getElementById('dfForm').reset();
+  document.getElementById('dfContent').style.display='block';
+  document.getElementById('dfSuccess').style.display='none';
+  document.getElementById('dfBtn').textContent='Send Quote Request';
+  document.getElementById('dfBtn').disabled=false;
+  document.getElementById('detailsForm').classList.remove('show');
+}
+
+/* init calculator */
+updateQuote();
+</script>
+</body>
+</html>
