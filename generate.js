@@ -261,16 +261,16 @@ const SERVICES = [
         icon: '🏡',
         heroImg: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1600&q=80',
         color: '#1c7ed6',
-        description: 'Professional Airbnb and short-let cleaning built around your check-in and check-out times. We handle the full guest turnover — cleaning, linen change, and restocking essentials — so your property is spotless and guest-ready every time, without the stress.',
+        description: 'Professional Airbnb and short-let cleaning built around your check-in and check-out times. We handle the complete guest turnover — cleaning, linen change, restocking, and photo reporting — so your property hits 5-star standard every time. Whether you manage your property remotely or in person, our after-clean photos give you full visibility of every turnover.',
         features: [
-            'Full turnover clean in 3 hours or under',
-            'Linen change & fresh towel sets',
-            'Before & after photos sent to host',
-            'Restock toiletries & essentials',
-            '7-day availability — early & late slots',
+            'Full 5-star turnover clean in 3 hours or under',
+            'Linen change & hotel-fold fresh towel sets',
+            'Before & after photos sent direct to host',
+            'Restock toiletries, toilet roll & essentials',
+            '7-day availability — early morning & late slots',
             'Same-day bookings accepted',
-            'Eco-friendly products safe for guests',
-            'Damage & maintenance reporting',
+            'Eco-friendly products — safe for guests & children',
+            'Damage & maintenance issue reporting',
         ],
         faqs: [
             { q: 'How much does Airbnb cleaning cost in {area}?', a: 'Our Airbnb turnover cleaning starts from £27/hr with a 3-hour minimum in {area}. A studio or 1-bed flat typically takes 3 hours (£81). A 2-bed takes around 3–4 hours (£81–£108). We quote clearly before booking — no hidden charges.' },
@@ -871,7 +871,7 @@ const BLOG_POSTS = [
         readMins: 7,
         relatedServiceSlug: 'end-of-tenancy-cleaning',
         relatedServiceArea: 'london',
-        intro: 'Deposits get withheld for one reason more than any other: cleaning. According to the Tenancy Deposit Scheme, cleaning disputes account for over 50% of all deposit deductions in England. In London, where rents — and therefore deposits — are among the highest in the country, getting this wrong is expensive. This checklist covers every room a letting agent will inspect. Use it to clean yourself or to verify a professional job.',
+        intro: 'Deposits get withheld for one reason more than any other: cleaning. According to the <a href="https://www.tenancydepositscheme.com/is-my-deposit-protected/what-happens-when-a-tenancy-ends/" target="_blank" rel="noopener noreferrer">Tenancy Deposit Scheme</a>, cleaning disputes account for over 50% of all deposit deductions in England. In London, where rents — and therefore deposits — are among the highest in the country, getting this wrong is expensive. This checklist covers every room a letting agent will inspect. Use it yourself or to verify a professional job. See also our guide on <a href="https://dscleanersltd.com/blog/how-to-get-your-deposit-back-end-of-tenancy.html">how to get your full deposit back</a>.',
         sections: [
             {
                 h2: 'Why Letting Agents Inspect So Thoroughly',
@@ -934,7 +934,7 @@ const BLOG_POSTS = [
             },
             {
                 h2: 'Professional Clean vs DIY',
-                body: 'A professional end of tenancy clean typically takes 4–8 hours for a 1–3 bed property and follows the same checklist above, documented with a dated invoice. Most letting agencies accept this as proof of professional cleaning, which removes their ability to charge for cleaning from your deposit. For a standard 1-bed flat in London, expect to pay £108–£135 for a professional clean. Compare that to a deposit deduction, which agents typically calculate at full cleaning costs plus admin — often £200–£400. The maths usually favour booking a professional.',
+                body: 'A <a href="https://dscleanersltd.com/landing/end-of-tenancy-cleaning-london.html">professional end of tenancy clean</a> typically takes 4–8 hours for a 1–3 bed property and follows the same checklist above, documented with a dated invoice. Most letting agencies accept this as proof of professional cleaning, which removes their ability to charge for cleaning from your deposit. For a standard 1-bed flat in London, expect to pay £108–£135. Compare that to a deposit deduction, which agents typically calculate at full cleaning costs plus admin — often £200–£400. The maths usually favour booking a professional. DS Cleaners provides a dated invoice accepted by all major London letting agencies.',
             },
         ],
         cta: {
@@ -942,6 +942,11 @@ const BLOG_POSTS = [
             body: 'DS Cleaners covers all areas of London. We clean to full agency checklist standard and provide a dated invoice. Response within 24 hours.',
             label: 'Get a Free Quote',
         },
+        sources: [
+            { url: 'https://www.tenancydepositscheme.com/is-my-deposit-protected/what-happens-when-a-tenancy-ends/', label: 'Tenancy Deposit Scheme — What happens when a tenancy ends' },
+            { url: 'https://www.gov.uk/tenancy-deposit-protection', label: 'UK Government — Tenancy deposit protection' },
+            { url: 'https://dscleanersltd.com/blog/how-to-get-your-deposit-back-end-of-tenancy.html', label: 'DS Cleaners — How to get your full deposit back' },
+        ],
     },
     {
         slug: 'deep-clean-vs-regular-clean',
@@ -953,7 +958,7 @@ const BLOG_POSTS = [
         readMins: 5,
         relatedServiceSlug: 'deep-cleaning',
         relatedServiceArea: 'london',
-        intro: 'Both terms appear on cleaning company websites, but the distinction matters practically — especially when you\'re deciding what to book and what to budget. The short answer: a regular clean maintains your home week to week; a deep clean resets it. Here\'s exactly what each involves.',
+        intro: 'Both terms appear on cleaning company websites, but the distinction matters practically — especially when you\'re deciding what to book and what to budget. The short answer: a regular clean maintains your home week to week; a <a href="https://dscleanersltd.com/landing/deep-cleaning-london.html">deep clean</a> resets it. Here\'s exactly what each involves. See also: <a href="https://dscleanersltd.com/blog/how-often-should-you-deep-clean-your-home.html">how often should you deep clean your home</a>.',
         sections: [
             {
                 h2: 'What a Regular Clean Covers',
@@ -1011,7 +1016,7 @@ const BLOG_POSTS = [
         readMins: 5,
         relatedServiceSlug: 'deep-cleaning',
         relatedServiceArea: 'london',
-        intro: 'There\'s no universal answer — the right frequency depends on your household size, lifestyle, and what you consider an acceptable baseline. But there are practical guidelines that apply to most homes, and clear signs that tell you when you\'ve left it too long.',
+        intro: 'There\'s no universal answer — the right frequency depends on your household size, lifestyle, and what you consider an acceptable baseline. But there are practical guidelines that apply to most homes, and clear signs that tell you when you\'ve left it too long. If you\'re not sure what a <a href="https://dscleanersltd.com/blog/deep-clean-vs-regular-clean.html">deep clean vs a regular clean</a> actually covers, read that first.',
         sections: [
             {
                 h2: 'The General Rule',
@@ -1116,11 +1121,11 @@ const BLOG_POSTS = [
         readMins: 6,
         relatedServiceSlug: 'end-of-tenancy-cleaning',
         relatedServiceArea: 'london',
-        intro: 'If you\'re moving out of a London rental, your deposit — typically 5 weeks\' rent — is at risk if the property isn\'t returned in the right condition. Cleaning is the single most common reason deposits are withheld or partially deducted. This guide explains what the bar actually is, what agents look for, and how to make sure you hit it.',
+        intro: 'If you\'re moving out of a London rental, your deposit — typically 5 weeks\' rent — is at risk if the property isn\'t returned in the right condition. Cleaning is the single most common reason deposits are withheld or partially deducted. This guide explains what the bar actually is, what agents look for, and how to make sure you hit it. For a room-by-room task list, see our <a href="https://dscleanersltd.com/blog/end-of-tenancy-cleaning-checklist-london.html">end of tenancy cleaning checklist</a>.',
         sections: [
             {
                 h2: 'Why Cleaning Is the #1 Deposit Dispute',
-                body: 'The Tenancy Deposit Scheme reports that cleaning accounts for 56% of all deposit deductions across England and Wales. In London, where average deposits run £2,000–£4,000 or more, even a partial deduction is significant. The reason cleaning causes so many disputes is the difference between "clean enough to live in" and "clean enough to relet immediately" — the standard a landlord or agent applies. You could spend a full day cleaning and still fall short of check-in condition if you miss key areas.',
+                body: 'The <a href="https://www.tenancydepositscheme.com/is-my-deposit-protected/what-happens-when-a-tenancy-ends/" target="_blank" rel="noopener noreferrer">Tenancy Deposit Scheme</a> reports that cleaning accounts for 56% of all deposit deductions across England and Wales. In London, where average deposits run £2,000–£4,000 or more, even a partial deduction is significant. The reason cleaning causes so many disputes is the difference between "clean enough to live in" and "clean enough to relet immediately" — the standard a landlord or agent applies. You could spend a full day cleaning and still fall short of check-in condition if you miss key areas.',
             },
             {
                 h2: 'What Agents Actually Check',
@@ -1138,7 +1143,7 @@ const BLOG_POSTS = [
             },
             {
                 h2: 'The Professional Invoice Advantage',
-                body: 'When you book a professional end of tenancy clean, you receive a dated invoice confirming that a professional service was carried out. Most letting agents accept this as satisfying the cleaning clause in your tenancy agreement, which removes their ability to charge you for cleaning from your deposit — even if they have minor quibbles with the result. This is why professional cleaning at £108–£162 for a typical London flat is almost always the better financial decision versus a deposit deduction at full agency rates (often £200–£400 or more).',
+                body: 'When you book a <a href="https://dscleanersltd.com/landing/end-of-tenancy-cleaning-london.html">professional end of tenancy clean</a>, you receive a dated invoice confirming that a professional service was carried out. Most letting agents accept this as satisfying the cleaning clause in your tenancy agreement, which removes their ability to charge you for cleaning from your deposit — even if they have minor quibbles with the result. This is why professional cleaning at £108–£162 for a typical London flat is almost always the better financial decision versus a deposit deduction at full agency rates (often £200–£400 or more). Under <a href="https://www.gov.uk/tenancy-deposit-protection" target="_blank" rel="noopener noreferrer">UK tenancy deposit protection rules</a>, landlords must justify any deduction — a professional invoice makes this considerably harder.',
             },
             {
                 h2: 'Timeline: When to Book',
@@ -1154,6 +1159,11 @@ const BLOG_POSTS = [
             body: 'End of tenancy cleaning from £27/hr. We cover all London areas and provide a full invoice for your agent. Free quote in 24 hours.',
             label: 'Get a Free Quote',
         },
+        sources: [
+            { url: 'https://www.tenancydepositscheme.com/is-my-deposit-protected/what-happens-when-a-tenancy-ends/', label: 'Tenancy Deposit Scheme — Cleaning as #1 cause of deposit disputes' },
+            { url: 'https://www.gov.uk/tenancy-deposit-protection', label: 'UK Government — Tenancy deposit protection scheme rules' },
+            { url: 'https://dscleanersltd.com/blog/end-of-tenancy-cleaning-checklist-london.html', label: 'DS Cleaners — End of tenancy cleaning checklist (room-by-room)' },
+        ],
     },
     {
         slug: 'office-cleaning-london-guide',
@@ -1329,7 +1339,7 @@ const BLOG_POSTS = [
         readMins: 7,
         relatedServiceSlug: 'airbnb-cleaning',
         relatedServiceArea: 'london',
-        intro: 'Cleanliness is the single most cited reason guests leave negative Airbnb reviews — and the most common reason hosts lose Superhost status. In London, where short-let competition is intense and guest expectations are high, the standard of your turnover clean directly affects your ratings, your occupancy rate, and your income. This guide covers everything you need to know about professional Airbnb cleaning in London: what it includes, what it costs, and how to find a service you can actually rely on.',
+        intro: 'Cleanliness is the single most cited reason guests leave negative Airbnb reviews — and the most common reason hosts lose Superhost status. In London, where short-let competition is intense and guest expectations are high, the standard of your turnover clean directly affects your ratings, your occupancy rate, and your income. This guide covers everything you need to know about professional <a href="https://dscleanersltd.com/landing/airbnb-cleaning-london.html">Airbnb cleaning in London</a>: what it includes, what it costs, and how to find a service you can actually rely on. If you want a hands-on task list, go straight to our <a href="https://dscleanersltd.com/blog/airbnb-cleaning-checklist-london.html">Airbnb cleaning checklist for London hosts</a>.',
         sections: [
             {
                 h2: 'Why Airbnb Cleaning Is Different From Regular Domestic Cleaning',
@@ -1364,7 +1374,7 @@ const BLOG_POSTS = [
             },
             {
                 h2: 'Same-Day Turnovers: Managing Back-to-Back Guests',
-                body: 'Same-day turnovers — where a guest checks out in the morning and a new guest checks in that afternoon — are the most demanding scenario in Airbnb management. The window can be as short as two or three hours. A reliable professional service will: confirm availability at short notice, arrive on time with everything needed, work to a strict checklist regardless of what condition the previous guest left the property in, and send you confirmation photos before your guest arrives. At DS Cleaners, we accept same-day bookings in London. Contact us as early as possible — morning of the check-out is ideal — and we will confirm availability and a start time.',
+                body: 'Same-day turnovers — where a guest checks out in the morning and a new guest checks in that afternoon — are the most demanding scenario in Airbnb management. The window can be as short as two or three hours. A reliable professional service will: confirm availability at short notice, arrive on time with everything needed, work to a strict checklist regardless of what condition the previous guest left the property in, and send you confirmation photos before your guest arrives. According to <a href="https://www.airbnb.co.uk/help/article/1374" target="_blank" rel="noopener noreferrer">Airbnb\'s hosting standards</a>, cleanliness is the most weighted factor in overall guest satisfaction scores. At DS Cleaners, we accept same-day bookings across London. Contact us as early as possible — morning of the check-out is ideal.',
             },
             {
                 h2: 'Linen, Photos, and Restocking: What to Agree in Advance',
@@ -1397,6 +1407,12 @@ const BLOG_POSTS = [
             body: 'DS Cleaners provides professional Airbnb turnover cleaning across London. From £27/hr, 7 days a week, with before & after photos included. Free quote within 24 hours.',
             label: 'Get a Free Quote',
         },
+        sources: [
+            { url: 'https://www.airbnb.co.uk/help/article/1374', label: 'Airbnb — Guest satisfaction and cleanliness standards' },
+            { url: 'https://www.airbnb.co.uk/help/article/2820', label: 'Airbnb — Hosting standards and Superhost requirements' },
+            { url: 'https://dscleanersltd.com/blog/airbnb-cleaning-checklist-london.html', label: 'DS Cleaners — Airbnb cleaning checklist for London hosts' },
+            { url: 'https://dscleanersltd.com/landing/airbnb-cleaning-london.html', label: 'DS Cleaners — Airbnb cleaning service London' },
+        ],
     },
     {
         slug: 'airbnb-cleaning-checklist-london',
@@ -1408,7 +1424,7 @@ const BLOG_POSTS = [
         readMins: 6,
         relatedServiceSlug: 'airbnb-cleaning',
         relatedServiceArea: 'london',
-        intro: 'A consistent, thorough cleaning checklist is the foundation of every high-rated Airbnb property. Guests notice when things are missed — and London guests, paying premium short-let rates, notice more than most. Whether you clean your property yourself or use a professional service, this checklist covers every area a guest will see, use, and judge you on.',
+        intro: 'A consistent, thorough cleaning checklist is the foundation of every high-rated Airbnb property. Guests notice when things are missed — and London guests, paying premium short-let rates, notice more than most. Whether you clean your property yourself or use a professional service, this checklist covers every area a guest will see, use, and judge you on. For a full guide to choosing a reliable <a href="https://dscleanersltd.com/landing/airbnb-cleaning-london.html">Airbnb cleaning service in London</a>, read our <a href="https://dscleanersltd.com/blog/airbnb-cleaning-service-london-guide.html">host guide to Airbnb cleaning</a>.',
         sections: [
             {
                 h2: 'Before the Clean: What to Do First',
@@ -1439,7 +1455,7 @@ const BLOG_POSTS = [
             },
             {
                 h2: 'Bathroom Checklist',
-                body: 'Bathrooms receive the closest scrutiny. London\'s hard water means limescale builds quickly — descale at every turnover, not just occasionally:',
+                body: 'Bathrooms receive the closest scrutiny. <a href="https://www.thameswater.co.uk/help/water-quality/hard-water" target="_blank" rel="noopener noreferrer">London\'s exceptionally hard water</a> means limescale builds quickly — descale at every turnover, not just occasionally:',
                 list: [
                     'Toilet: inside bowl (including under the rim), seat both sides, cistern top, base, and surrounding floor',
                     'Shower screen or curtain: remove limescale; check curtain for mould at the base',
@@ -1500,6 +1516,12 @@ const BLOG_POSTS = [
             body: 'DS Cleaners provides Airbnb turnover cleaning across London, 7 days a week. Before & after photos included. From £27/hr with a 3-hour minimum. Free quote within 24 hours.',
             label: 'Get a Free Quote',
         },
+        sources: [
+            { url: 'https://www.airbnb.co.uk/help/article/1374', label: 'Airbnb — Guest satisfaction and cleanliness standards' },
+            { url: 'https://www.thameswater.co.uk/help/water-quality/hard-water', label: 'Thames Water — Hard water in London' },
+            { url: 'https://dscleanersltd.com/blog/airbnb-cleaning-service-london-guide.html', label: 'DS Cleaners — Airbnb cleaning service London: host guide' },
+            { url: 'https://dscleanersltd.com/landing/airbnb-cleaning-london.html', label: 'DS Cleaners — Airbnb cleaning service London' },
+        ],
     },
 ];
 
@@ -1630,6 +1652,14 @@ nav{position:sticky;top:0;z-index:100;height:64px;background:rgba(255,255,255,.9
 .blog-list li{display:flex;align-items:flex-start;gap:10px;font-size:.93rem;color:var(--grey-700);line-height:1.65}
 .blog-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:8px}
 .blog-intro{font-size:1.07rem;color:var(--grey-600);line-height:1.85;margin-bottom:2em;padding-bottom:2em;border-bottom:1px solid var(--grey-200)}
+.blog-body a{color:var(--blue);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.blog-body a:hover{text-decoration-thickness:2px}
+.blog-sources{margin:2.5em 0 1em;padding:20px 24px;background:var(--grey-50);border:1px solid var(--grey-200);border-radius:var(--radius)}
+.blog-sources h3{font-size:.82rem;font-weight:700;color:var(--navy);letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.blog-sources-list{display:flex;flex-direction:column;gap:6px;list-style:none;padding:0}
+.blog-sources-list li{font-size:.83rem;color:var(--grey-700);display:flex;align-items:flex-start;gap:8px}
+.blog-sources-list li::before{content:'→';color:var(--blue);font-weight:700;flex-shrink:0}
+.blog-sources-list a{color:var(--blue);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
 
 .sidebar{display:flex;flex-direction:column;gap:20px}
 .sidebar-cta{background:var(--navy);border-radius:var(--radius-lg);padding:28px;position:sticky;top:80px}
@@ -1703,6 +1733,7 @@ footer{background:var(--navy);padding:40px 5% 24px;margin-top:0}
   <article class="blog-body">
     <p class="blog-intro">${post.intro}</p>
     ${sectionsHtml}
+    ${post.sources && post.sources.length ? `<div class="blog-sources"><h3>Sources &amp; Further Reading</h3><ul class="blog-sources-list">${post.sources.map(s => `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}</a></li>`).join('')}</ul></div>` : ''}
   </article>
 
   <aside class="sidebar">
