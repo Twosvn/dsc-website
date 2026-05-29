@@ -871,11 +871,11 @@ const BLOG_POSTS = [
         readMins: 7,
         relatedServiceSlug: 'end-of-tenancy-cleaning',
         relatedServiceArea: 'london',
-        intro: 'Deposits get withheld for one reason more than any other: cleaning. According to the <a href="https://www.tenancydepositscheme.com/is-my-deposit-protected/what-happens-when-a-tenancy-ends/" target="_blank" rel="noopener noreferrer">Tenancy Deposit Scheme</a>, cleaning disputes account for over 50% of all deposit deductions in England. In London, where rents — and therefore deposits — are among the highest in the country, getting this wrong is expensive. This checklist covers every room a letting agent will inspect. Use it yourself or to verify a professional job. See also our guide on <a href="https://dscleanersltd.com/blog/how-to-get-your-deposit-back-end-of-tenancy.html">how to get your full deposit back</a>.',
+        intro: 'You\'ve lived in your flat for a year or two. You\'ve been a decent tenant. Now you\'re moving out and staring at a £350 cleaning deduction on your deposit return statement. This is one of the most common — and most preventable — things that happens to London renters. According to the <a href="https://www.tenancydepositscheme.com/is-my-deposit-protected/what-happens-when-a-tenancy-ends/" target="_blank" rel="noopener noreferrer">Tenancy Deposit Scheme</a>, cleaning disputes account for over 50% of all deposit deductions in England. With London deposits typically running £1,500–£3,500+, this room-by-room checklist is the most useful thing you\'ll read before moving out. See also: <a href="https://dscleanersltd.com/blog/how-to-get-your-deposit-back-end-of-tenancy.html">how to get your full deposit back in London</a>.',
         sections: [
             {
-                h2: 'Why Letting Agents Inspect So Thoroughly',
-                body: 'Your tenancy agreement almost certainly includes a clause requiring you to return the property in the same condition it was handed over — fair wear and tear excepted. Letting agents use a check-out report that compares the property\'s current state against the check-in inventory, often with photographs. The standard is professional-grade: not "clean enough to live in" but "clean enough to relet immediately." That distinction matters.',
+                h2: 'Why Letting Agents Inspect So Thoroughly (and What They\'re Actually Looking For)',
+                body: 'Your tenancy agreement almost certainly has a clause requiring you to return the property in the same condition it was handed over — fair wear and tear excepted. Agents use a detailed check-out report against your original check-in inventory, often with side-by-side photos. The standard isn\'t "clean enough to live in" — it\'s "clean enough to relet tomorrow." In London\'s rental market, where void periods cost landlords hundreds per day, agents enforce that standard hard. Most tenants underestimate the gap between their clean and what an agent considers acceptable. The kitchen oven is where nearly every dispute starts.',
             },
             {
                 h2: 'Kitchen Checklist',
@@ -958,7 +958,7 @@ const BLOG_POSTS = [
         readMins: 5,
         relatedServiceSlug: 'deep-cleaning',
         relatedServiceArea: 'london',
-        intro: 'Both terms appear on cleaning company websites, but the distinction matters practically — especially when you\'re deciding what to book and what to budget. The short answer: a regular clean maintains your home week to week; a <a href="https://dscleanersltd.com/landing/deep-cleaning-london.html">deep clean</a> resets it. Here\'s exactly what each involves. See also: <a href="https://dscleanersltd.com/blog/how-often-should-you-deep-clean-your-home.html">how often should you deep clean your home</a>.',
+        intro: 'Every cleaning company in London — from big platforms like Fantastic Services and Housekeep to your local independent — lists both "regular" and "deep" cleaning. But what actually separates them, and when is it worth paying more? The short answer: a <a href="https://dscleanersltd.com/landing/domestic-cleaning-london.html">regular clean in London</a> keeps your flat ticking over week to week. A <a href="https://dscleanersltd.com/landing/deep-cleaning-london.html">deep cleaning service</a> is the full reset — behind the oven, inside every cupboard, into every corner you\'ve been avoiding for months. Here\'s exactly what each involves, what it costs, and when it makes financial sense to book the upgrade. See also: <a href="https://dscleanersltd.com/blog/how-often-should-you-deep-clean-your-home.html">how often should you deep clean your London home</a>.',
         sections: [
             {
                 h2: 'What a Regular Clean Covers',
@@ -996,8 +996,8 @@ const BLOG_POSTS = [
                 body: 'A deep clean makes sense at key transition points or when a regular clean can no longer keep up with accumulated build-up. Common triggers include: moving into a new property (regardless of what the previous occupants claimed to have done), after renovation work, after a period when regular cleaning was skipped for several months, end of tenancy handover, or a seasonal reset — many clients book once or twice a year. If your regular cleaner is spending most of their time on catch-up work, it\'s a sign the property needs a deep clean first.',
             },
             {
-                h2: 'Cost Comparison',
-                body: 'Regular cleaning at DS Cleaners starts from £21/hr with a 2-hour minimum, so a typical session runs £42–£84. A deep clean starts from £27/hr with a 4-hour minimum — a standard flat runs £108–£162. The higher rate reflects the intensive nature of the work and the specialist products used. Many clients do a deep clean first, then maintain with regular fortnightly cleans — often the most cost-effective approach over time.',
+                h2: 'Cost Comparison (Including What Big Platforms Charge)',
+                body: 'At DS Cleaners, a regular clean starts from £21/hr (2-hour minimum) — a typical session runs £42–£84. A <a href="https://dscleanersltd.com/landing/deep-cleaning-london.html">professional deep clean</a> starts from £27/hr with a 4-hour minimum — a standard London flat runs £108–£162. For comparison, platforms like Fantastic Services and Housekeep charge similar or higher hourly rates but add platform fees on top, meaning what looks like £20/hr can land at £27+ after charges. The playbook most of our clients use: book a one-off deep clean to reset the property, then maintain with a fortnightly regular clean. You\'re not paying deep-clean rates every fortnight — just keeping the standard you\'ve already paid to achieve.',
             },
         ],
         cta: {
@@ -1005,6 +1005,11 @@ const BLOG_POSTS = [
             body: 'Tell us about your property and we\'ll recommend the right service. Free quote, no obligation, reply within 24 hours.',
             label: 'Get a Free Quote',
         },
+        sources: [
+            { url: 'https://dscleanersltd.com/landing/deep-cleaning-london.html', label: 'DS Cleaners — Deep cleaning service London' },
+            { url: 'https://dscleanersltd.com/landing/domestic-cleaning-london.html', label: 'DS Cleaners — Regular domestic cleaning London' },
+            { url: 'https://dscleanersltd.com/blog/how-often-should-you-deep-clean-your-home.html', label: 'DS Cleaners — How often should you deep clean your home' },
+        ],
     },
     {
         slug: 'how-often-should-you-deep-clean-your-home',
@@ -1016,7 +1021,7 @@ const BLOG_POSTS = [
         readMins: 5,
         relatedServiceSlug: 'deep-cleaning',
         relatedServiceArea: 'london',
-        intro: 'There\'s no universal answer — the right frequency depends on your household size, lifestyle, and what you consider an acceptable baseline. But there are practical guidelines that apply to most homes, and clear signs that tell you when you\'ve left it too long. If you\'re not sure what a <a href="https://dscleanersltd.com/blog/deep-clean-vs-regular-clean.html">deep clean vs a regular clean</a> actually covers, read that first.',
+        intro: 'Nobody actually tells you how often to deep clean your flat. Your parents say "when it needs it." Every cleaning company says "twice a year." Neither answer is that useful. The real answer depends on your property, how many people live there, whether you have pets, and the specific realities of renting in London — where <a href="https://www.thameswater.co.uk/help/water-quality/hard-water" target="_blank" rel="noopener noreferrer">hard water</a> and urban pollution accelerate build-up faster than most places in the UK. Here\'s a practical, room-by-room guide with clear signs that tell you when you\'ve left it too long. If you\'re not sure what a <a href="https://dscleanersltd.com/blog/deep-clean-vs-regular-clean.html">deep clean vs a regular clean</a> actually involves, start there first.',
         sections: [
             {
                 h2: 'The General Rule',
@@ -1059,10 +1064,15 @@ const BLOG_POSTS = [
             },
         ],
         cta: {
-            heading: 'Ready to Reset Your Home?',
-            body: 'We cover all areas of London. Deep cleans from £27/hr with a 4-hour minimum. Free quote within 24 hours.',
+            heading: 'Ready to Reset Your London Flat?',
+            body: 'DS Cleaners covers South and South East London. Deep cleans from £27/hr with a 4-hour minimum. Eco-friendly products. Free quote within 24 hours.',
             label: 'Book a Deep Clean',
         },
+        sources: [
+            { url: 'https://www.thameswater.co.uk/help/water-quality/hard-water', label: 'Thames Water — Hard water and limescale in London' },
+            { url: 'https://dscleanersltd.com/landing/deep-cleaning-london.html', label: 'DS Cleaners — Deep cleaning service London' },
+            { url: 'https://dscleanersltd.com/blog/deep-clean-vs-regular-clean.html', label: 'DS Cleaners — Deep clean vs regular clean' },
+        ],
     },
     {
         slug: 'how-to-prepare-for-a-professional-clean',
@@ -1074,7 +1084,7 @@ const BLOG_POSTS = [
         readMins: 4,
         relatedServiceSlug: 'domestic-cleaning',
         relatedServiceArea: 'london',
-        intro: 'A professional clean achieves its best results when your cleaner can focus on actual cleaning — not working around clutter or hunting for the bin bags. A few minutes of preparation the morning of your appointment makes a real difference to the outcome. Here\'s exactly what to do.',
+        intro: 'If you\'ve never booked a professional cleaner before — or you\'re switching from a platform like Housekeep or Airtasker to a dedicated service — there are a few things that make the difference between a good clean and a great one. It\'s not about having a spotless flat before they arrive. It\'s about 10 minutes of preparation that lets your cleaner spend 100% of their time actually cleaning. Here\'s exactly what to do.',
         sections: [
             {
                 h2: '1. Tidy Before They Arrive — Not Deep Clean, Just Tidy',
@@ -1106,10 +1116,14 @@ const BLOG_POSTS = [
             },
         ],
         cta: {
-            heading: 'Book Your First Professional Clean',
-            body: 'Domestic cleaning from £21/hr. Fortnightly and weekly schedules available across London. Free quote in 24 hours.',
+            heading: 'Book Your First Professional Clean in London',
+            body: 'Domestic cleaning from £21/hr. Fortnightly and weekly schedules available across South and South East London. Free quote in 24 hours.',
             label: 'Get a Free Quote',
         },
+        sources: [
+            { url: 'https://dscleanersltd.com/landing/domestic-cleaning-london.html', label: 'DS Cleaners — Domestic cleaning service London' },
+            { url: 'https://dscleanersltd.com/blog/deep-clean-vs-regular-clean.html', label: 'DS Cleaners — Deep clean vs regular clean: what\'s the difference' },
+        ],
     },
     {
         slug: 'how-to-get-your-deposit-back-end-of-tenancy',
@@ -1121,7 +1135,7 @@ const BLOG_POSTS = [
         readMins: 6,
         relatedServiceSlug: 'end-of-tenancy-cleaning',
         relatedServiceArea: 'london',
-        intro: 'If you\'re moving out of a London rental, your deposit — typically 5 weeks\' rent — is at risk if the property isn\'t returned in the right condition. Cleaning is the single most common reason deposits are withheld or partially deducted. This guide explains what the bar actually is, what agents look for, and how to make sure you hit it. For a room-by-room task list, see our <a href="https://dscleanersltd.com/blog/end-of-tenancy-cleaning-checklist-london.html">end of tenancy cleaning checklist</a>.',
+        intro: 'Your London deposit is probably somewhere between £1,500 and £3,500. Possibly a lot more if you\'re in Zone 1-2. Losing a chunk of that to a cleaning dispute isn\'t just annoying — it\'s preventable, and the fix is straightforward once you know what agents are actually checking. The <a href="https://www.tenancydepositscheme.com/is-my-deposit-protected/what-happens-when-a-tenancy-ends/" target="_blank" rel="noopener noreferrer">Tenancy Deposit Scheme</a> consistently reports cleaning as the #1 cause of deposit disputes in England and Wales. This guide covers exactly what agents look for, the evidence that protects you, and why a professional clean is almost always the better financial decision. For a detailed room-by-room task list, see our <a href="https://dscleanersltd.com/blog/end-of-tenancy-cleaning-checklist-london.html">end of tenancy cleaning checklist for London renters</a>.',
         sections: [
             {
                 h2: 'Why Cleaning Is the #1 Deposit Dispute',
@@ -1175,7 +1189,7 @@ const BLOG_POSTS = [
         readMins: 6,
         relatedServiceSlug: 'commercial-cleaning',
         relatedServiceArea: 'london',
-        intro: 'Office cleanliness directly affects staff wellbeing, client perception, and the overall efficiency of your business. Yet many London businesses operate on cleaning contracts that aren\'t well matched to their actual premises and usage. This guide covers the practical considerations: what professional commercial cleaning should include, how to determine the right frequency, and what to look for in a contract.',
+        intro: 'Whether you run a startup in Shoreditch, a salon in Brixton, or a retail unit in Clapham — the state of your space says a lot about your business. Clients notice. Staff notice. And in London\'s competitive market, first impressions matter. Yet most businesses end up on <a href="https://dscleanersltd.com/landing/commercial-cleaning-london.html">commercial cleaning contracts</a> that were never properly tailored to their space and usage. This guide covers what professional office cleaning in London should actually include, how to figure out the right frequency, and what to insist on in any contract you sign.',
         sections: [
             {
                 h2: 'Why Office Cleanliness Is a Business Issue',
@@ -1222,10 +1236,14 @@ const BLOG_POSTS = [
             },
         ],
         cta: {
-            heading: 'Get a Commercial Cleaning Quote',
-            body: 'We cover offices, retail, hospitality, and more across London. Rolling monthly contracts, no long tie-in. Free quote tailored to your premises.',
+            heading: 'Get a Commercial Cleaning Quote for Your London Business',
+            body: 'DS Cleaners covers offices, retail, hospitality and more across South and South East London. Rolling monthly contracts, no long tie-in. Free quote tailored to your premises.',
             label: 'Get a Free Quote',
         },
+        sources: [
+            { url: 'https://dscleanersltd.com/landing/commercial-cleaning-london.html', label: 'DS Cleaners — Commercial cleaning service London' },
+            { url: 'https://www.hse.gov.uk/pubns/indg498.pdf', label: 'HSE — Workplace cleanliness and infection control guidance' },
+        ],
     },
     {
         slug: 'spring-cleaning-tips-london',
@@ -1237,7 +1255,7 @@ const BLOG_POSTS = [
         readMins: 5,
         relatedServiceSlug: 'domestic-cleaning',
         relatedServiceArea: 'london',
-        intro: 'Spring cleaning isn\'t just a tradition — it\'s a practical response to what happens in a home over winter. Closed windows, central heating, and less natural light mean that dust, mould, and grease accumulate in ways that aren\'t always visible day to day. A thorough spring reset sets a clean baseline for the rest of the year. Here\'s how to approach it effectively.',
+        intro: 'Spring cleaning gets a bad reputation — it sounds like a weekend of misery for no real reason. But if you\'ve been through a London winter with the heating on, windows shut, and limited ventilation, your flat has almost certainly accumulated grease, limescale, and dust in places your regular clean never touches. A proper spring deep clean in London resets that baseline. You\'ll notice the difference immediately — and it makes everything easier to maintain for the rest of the year. Here\'s how to approach it without making it a month-long project.',
         sections: [
             {
                 h2: 'Why London Homes Need Extra Attention',
@@ -1278,10 +1296,15 @@ const BLOG_POSTS = [
             },
         ],
         cta: {
-            heading: 'Book a One-Off Spring Deep Clean',
-            body: 'DS Cleaners covers all areas of London. Spring deep cleans from £27/hr with a 4-hour minimum. Free quote within 24 hours.',
+            heading: 'Book a One-Off Spring Deep Clean in London',
+            body: 'DS Cleaners covers South and South East London. Spring deep cleans from £27/hr with a 4-hour minimum. Eco-friendly products. Free quote within 24 hours.',
             label: 'Get a Free Quote',
         },
+        sources: [
+            { url: 'https://dscleanersltd.com/landing/deep-cleaning-london.html', label: 'DS Cleaners — Deep cleaning service London' },
+            { url: 'https://dscleanersltd.com/blog/how-often-should-you-deep-clean-your-home.html', label: 'DS Cleaners — How often should you deep clean your home' },
+            { url: 'https://www.thameswater.co.uk/help/water-quality/hard-water', label: 'Thames Water — Hard water in London' },
+        ],
     },
     {
         slug: 'eco-friendly-cleaning-what-it-means',
@@ -1293,7 +1316,7 @@ const BLOG_POSTS = [
         readMins: 4,
         relatedServiceSlug: 'cleaning-services',
         relatedServiceArea: 'london',
-        intro: '"Eco-friendly" appears on almost every cleaning company\'s website. But what does it actually mean in practice — and does it make a difference to how clean your home gets? Here\'s a straightforward breakdown.',
+        intro: '"Eco-friendly cleaning" is plastered across the websites of every cleaning company in London right now — including the big platforms. But most of them are vague about what it actually means. Does it mean the products have a green logo? A recycled bottle? A certification nobody\'s heard of? Here\'s what professional eco-friendly cleaning <em>actually</em> involves — the ingredients, why they matter, whether they clean as well, and how to tell greenwashing from the real thing. Spoiler: the difference is in the ingredient list, not the label.',
         sections: [
             {
                 h2: 'The Problem with Conventional Cleaning Chemicals',
@@ -1319,8 +1342,12 @@ const BLOG_POSTS = [
                 body: 'For households with children, people with respiratory conditions, or anyone with sensitivities to fragrances and chemical compounds, eco-friendly products are a straightforward preference. Beyond health, surfaces like natural stone, sealed wood, and certain finishes are better maintained with gentler, pH-neutral formulations over time — reducing the need for restoration work. And for anyone conscious of their environmental impact, the cumulative difference of professional-grade, biodegradable products across a year of weekly cleans is meaningful.',
             },
             {
+                h2: 'How to Spot Greenwashing vs Genuine Eco Cleaning',
+                body: 'Many national cleaning platforms claim eco-friendly credentials without specifying products or certifications. Red flags: vague language like "environmentally conscious", no ingredient disclosure, products with synthetic fragrance listed as "natural". What genuine eco-friendly cleaning looks like: biodegradable surfactants (plant-derived, not petroleum-based), no phosphates or chlorine bleach, no synthetic fragrance, and willingness to name the products on request.',
+            },
+            {
                 h2: 'What DS Cleaners Uses',
-                body: 'We use professional-grade, eco-friendly products for all domestic and commercial cleaning. Our range is biodegradable, free from harsh chemicals, and effective across all standard residential surfaces. If you have specific surface requirements or sensitivities, tell us when you book — we\'ll confirm the exact products we\'ll use for your appointment.',
+                body: 'We use professional-grade, eco-friendly products for all domestic and commercial cleaning across London. Our range is biodegradable, free from harsh chemicals, and effective across all standard residential surfaces. We\'re happy to name specific products on request — no vague "eco-friendly" claims. If you have specific surface requirements or sensitivities (marble, unsealed stone, children\'s rooms), tell us when you book and we\'ll confirm exactly what we\'ll use.',
             },
         ],
         cta: {
@@ -1328,6 +1355,11 @@ const BLOG_POSTS = [
             body: 'Domestic cleaning from £21/hr across London. We bring all products. Free quote within 24 hours.',
             label: 'Get a Free Quote',
         },
+        sources: [
+            { url: 'https://www.ecolabelindex.com/ecolabels/?st=country,gb', label: 'Ecolabel Index — UK certified eco-friendly products' },
+            { url: 'https://www.gov.uk/guidance/hazardous-waste-overview', label: 'UK Government — Chemical hazard classification guidance' },
+            { url: 'https://dscleanersltd.com/landing/domestic-cleaning-london.html', label: 'DS Cleaners — Eco-friendly domestic cleaning London' },
+        ],
     },
     {
         slug: 'airbnb-cleaning-service-london-guide',
@@ -1388,6 +1420,17 @@ const BLOG_POSTS = [
             {
                 h2: 'Key Access: How London Hosts Typically Manage Entry',
                 body: 'Most London Airbnb hosts use one of four access methods: a key safe mounted near the entrance, a smart lock with a temporary code, a concierge handover (for apartment buildings), or a direct key handoff. A professional Airbnb cleaning service should be comfortable with all of these. Confirm the access method when booking and ensure your cleaner has the right code or key in advance — this eliminates the most common source of delays on the day.',
+            },
+            {
+                h2: 'Platform Cleaning Apps vs a Dedicated Airbnb Cleaner',
+                body: 'Apps like Housekeep, Fantastic Services, and Turno will find you someone to clean your Airbnb. Convenient — but there are trade-offs worth knowing before you hand over access to your property:',
+                list: [
+                    'Consistency: platforms match you with whoever is available that day. You might get a different cleaner every turnover — they don\'t know your property, your setup, or your guest expectations',
+                    'Pricing: platform services add booking fees and service charges on top of cleaner rates. What looks like £20/hr can land at £27+ per hour after platform fees',
+                    'Communication: on big platforms you\'re messaging through an app. With a dedicated service you have a direct contact — real person, faster response when you need a same-day slot',
+                    'Photo reports: most platform bookings don\'t guarantee before/after photos. DS Cleaners sends them after every single turnover — useful when disputes arise with guests',
+                    'Accountability: if something goes wrong, platforms route you through their support system. With a direct service, you call us',
+                ],
             },
             {
                 h2: 'What to Look for in a Reliable Airbnb Cleaning Service',
