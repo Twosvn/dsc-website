@@ -7,8 +7,8 @@ const path = require('path');
 const BRAND = {
     name: 'DS Cleaners',
     phone: '+44 7765 875615',
-    email: 'info@dscleaners.com',
-    domain: 'https://www.dscleaners.com',
+    email: 'info@dscleanersltd.com',
+    domain: 'https://dscleanersltd.com',
     founded: '2009',
 };
 
