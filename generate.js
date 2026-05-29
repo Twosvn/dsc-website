@@ -37,6 +37,70 @@ const AREAS = [
         neighbourhoods: 'Westminster, City of London, Islington, Camden, Hackney, Southwark, Lambeth, Tower Hamlets',
         desc: 'We cover all areas of London including Central, North, East, South, and West London.',
     },
+    {
+        slug: 'clapham',
+        name: 'Clapham',
+        short: 'Clapham',
+        postcodes: 'SW4, SW8, SW9',
+        neighbourhoods: 'Clapham North, Clapham South, Clapham Common, Stockwell, Oval',
+        desc: 'We cover all of Clapham including Clapham North, Clapham South, Clapham Common, Stockwell, and Oval across SW4, SW8, and SW9.',
+    },
+    {
+        slug: 'battersea',
+        name: 'Battersea',
+        short: 'Battersea',
+        postcodes: 'SW8, SW11',
+        neighbourhoods: 'Battersea Park, Nine Elms, Queenstown, Clapham Junction, Lavender Hill',
+        desc: 'We cover all of Battersea including Nine Elms, Queenstown, Battersea Park, and Clapham Junction across SW8 and SW11.',
+    },
+    {
+        slug: 'brixton',
+        name: 'Brixton',
+        short: 'Brixton',
+        postcodes: 'SW2, SW9, SW16',
+        neighbourhoods: 'Brixton, Tulse Hill, Streatham Hill, Stockwell, Herne Hill',
+        desc: 'We cover Brixton and surrounding areas including Tulse Hill, Streatham Hill, Stockwell, and Herne Hill across SW2, SW9, and SW16.',
+    },
+    {
+        slug: 'wimbledon',
+        name: 'Wimbledon',
+        short: 'Wimbledon',
+        postcodes: 'SW19, SW20',
+        neighbourhoods: 'Wimbledon Village, Wimbledon Town Centre, Raynes Park, Colliers Wood, Merton',
+        desc: 'We cover Wimbledon and surrounding areas including Wimbledon Village, Raynes Park, Colliers Wood, and Merton across SW19 and SW20.',
+    },
+    {
+        slug: 'greenwich',
+        name: 'Greenwich',
+        short: 'Greenwich',
+        postcodes: 'SE10, SE3, SE7',
+        neighbourhoods: 'Greenwich, Blackheath, Charlton, Woolwich, East Greenwich',
+        desc: 'We cover Greenwich and surrounding areas including Blackheath, Charlton, Woolwich, and East Greenwich across SE10, SE3, and SE7.',
+    },
+    {
+        slug: 'peckham',
+        name: 'Peckham',
+        short: 'Peckham',
+        postcodes: 'SE15, SE22, SE14',
+        neighbourhoods: 'Peckham, East Dulwich, Nunhead, New Cross, Telegraph Hill',
+        desc: 'We cover Peckham and surrounding areas including East Dulwich, Nunhead, New Cross, and Telegraph Hill across SE15, SE22, and SE14.',
+    },
+    {
+        slug: 'lewisham',
+        name: 'Lewisham',
+        short: 'Lewisham',
+        postcodes: 'SE13, SE4, SE6, SE12',
+        neighbourhoods: 'Lewisham, Catford, Brockley, Ladywell, Forest Hill, Hither Green',
+        desc: 'We cover Lewisham and surrounding areas including Catford, Brockley, Ladywell, Forest Hill, and Hither Green across SE13, SE4, SE6, and SE12.',
+    },
+    {
+        slug: 'wandsworth',
+        name: 'Wandsworth',
+        short: 'Wandsworth',
+        postcodes: 'SW17, SW18, SW12',
+        neighbourhoods: 'Wandsworth Town, Tooting, Balham, Earlsfield, Southfields',
+        desc: 'We cover Wandsworth and surrounding areas including Tooting, Balham, Earlsfield, and Southfields across SW17, SW18, and SW12.',
+    },
 ];
 
 const SERVICES = [
@@ -1474,4 +1538,55 @@ footer{background:var(--navy);padding:32px 5% 20px}
 
 fs.writeFileSync(path.join(blogDir, 'index.html'), blogIndexHtml);
 console.log('✓ blog/index.html');
-console.log(`\nTotal generated: ${count} landing pages + ${blogCount} blog posts + 1 blog index`);
+
+// ─────────────────────────────────────────────
+// SITEMAP
+// ─────────────────────────────────────────────
+const today = new Date().toISOString().split('T')[0];
+
+const sitemapUrls = [
+    // Homepage
+    { url: `${BRAND.domain}/`, priority: '1.0', changefreq: 'weekly' },
+    // Blog index
+    { url: `${BRAND.domain}/blog/`, priority: '0.8', changefreq: 'weekly' },
+    // Landing pages
+    ...fs.readdirSync(outDir).filter(f => f.endsWith('.html')).map(f => ({
+        url: `${BRAND.domain}/landing/${f}`,
+        priority: '0.9',
+        changefreq: 'monthly',
+    })),
+    // Blog posts
+    ...BLOG_POSTS.map(p => ({
+        url: `${BRAND.domain}/blog/${p.slug}.html`,
+        priority: '0.7',
+        changefreq: 'monthly',
+        lastmod: p.datePublished,
+    })),
+];
+
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map(u => `  <url>
+    <loc>${u.url}</loc>
+    <lastmod>${u.lastmod || today}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapXml);
+console.log(`✓ sitemap.xml (${sitemapUrls.length} URLs)`);
+
+// ─────────────────────────────────────────────
+// ROBOTS.TXT
+// ─────────────────────────────────────────────
+const robotsTxt = `User-agent: *
+Allow: /
+
+Sitemap: ${BRAND.domain}/sitemap.xml
+`;
+
+fs.writeFileSync(path.join(__dirname, 'robots.txt'), robotsTxt);
+console.log('✓ robots.txt');
+
+console.log(`\nTotal generated: ${count} landing pages + ${blogCount} blog posts + 1 blog index + sitemap + robots.txt`);
