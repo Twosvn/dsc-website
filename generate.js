@@ -101,6 +101,46 @@ const AREAS = [
         neighbourhoods: 'Wandsworth Town, Tooting, Balham, Earlsfield, Southfields',
         desc: 'We cover Wandsworth and surrounding areas including Tooting, Balham, Earlsfield, and Southfields across SW17, SW18, and SW12.',
     },
+    {
+        slug: 'tooting',
+        name: 'Tooting',
+        short: 'Tooting',
+        postcodes: 'SW17, SW16',
+        neighbourhoods: 'Tooting Bec, Tooting Broadway, Upper Tooting, Balham, Streatham',
+        desc: 'We cover Tooting and surrounding areas including Tooting Bec, Tooting Broadway, Upper Tooting, and nearby Balham across SW17 and SW16.',
+    },
+    {
+        slug: 'balham',
+        name: 'Balham',
+        short: 'Balham',
+        postcodes: 'SW12, SW17',
+        neighbourhoods: 'Balham, Tooting Bec, Clapham South, Bedford Hill, Nightingale Lane',
+        desc: 'We cover Balham and surrounding areas including Tooting Bec, Clapham South, and Bedford Hill across SW12 and SW17.',
+    },
+    {
+        slug: 'streatham',
+        name: 'Streatham',
+        short: 'Streatham',
+        postcodes: 'SW16, SW2',
+        neighbourhoods: 'Streatham, Streatham Hill, Streatham Common, Streatham Park, Norbury',
+        desc: 'We cover Streatham and surrounding areas including Streatham Hill, Streatham Common, Streatham Park, and Norbury across SW16 and SW2.',
+    },
+    {
+        slug: 'dulwich',
+        name: 'Dulwich',
+        short: 'Dulwich',
+        postcodes: 'SE21, SE22, SE24',
+        neighbourhoods: 'East Dulwich, West Dulwich, Dulwich Village, Herne Hill, Tulse Hill',
+        desc: 'We cover Dulwich and surrounding areas including East Dulwich, West Dulwich, Dulwich Village, and Herne Hill across SE21, SE22, and SE24.',
+    },
+    {
+        slug: 'kennington',
+        name: 'Kennington',
+        short: 'Kennington',
+        postcodes: 'SE11, SE17',
+        neighbourhoods: 'Kennington, Oval, Vauxhall, Elephant & Castle, Walworth',
+        desc: 'We cover Kennington and surrounding areas including Oval, Vauxhall, Elephant & Castle, and Walworth across SE11 and SE17.',
+    },
 ];
 
 const SERVICES = [
@@ -241,6 +281,34 @@ const SERVICES = [
     },
 ];
 
+const REVIEW_POOLS = {
+    'domestic-cleaning': [
+        { text: '"Very happy with our service today from our two cleaners, house is spotless and both the team friendly and easy going. Will definitely recommend."', author: 'Shannon P.', sub: 'Verified Google Review' },
+        { text: '"An excellent cleaning service — very pleasant, thorough and professional. Highly recommended."', author: 'Richard B.', sub: 'Verified Google Review' },
+        { text: '"Great service, amazing staff and very professional. Highly recommend."', author: 'Nour E.', sub: 'Verified Google Review' },
+    ],
+    'deep-cleaning': [
+        { text: '"Worth every penny for amazing deep cleaning!"', author: 'Drake', sub: 'Verified Google Review' },
+        { text: '"Absolutely thrilled with the service. From start to finish, they provided exceptional cleaning."', author: 'Joshua J.', sub: 'Verified Google Review' },
+        { text: '"Amazing service! Quick, professional and reliable."', author: 'Kiera', sub: 'Verified Google Review' },
+    ],
+    'end-of-tenancy-cleaning': [
+        { text: '"Fantastic service in every way. I would highly recommend. Excellent cleaners and really good admin!"', author: 'Chavi B.', sub: 'Verified Google Review' },
+        { text: '"Happy with the quality of the service. Timing and overall communication was great too."', author: 'Mohamad E.', sub: 'Verified Google Review' },
+        { text: '"An excellent cleaning service — very pleasant, thorough and professional. Highly recommended."', author: 'Richard B.', sub: 'Verified Google Review' },
+    ],
+    'commercial-cleaning': [
+        { text: '"An excellent cleaning service — very pleasant, thorough and professional. Highly recommended."', author: 'Richard B.', sub: 'Verified Google Review' },
+        { text: '"Great service, amazing staff and very professional. Highly recommend."', author: 'Nour E.', sub: 'Verified Google Review' },
+        { text: '"Happy with the quality of the service. Timing and overall communication was great too."', author: 'Mohamad E.', sub: 'Verified Google Review' },
+    ],
+    'cleaning-services': [
+        { text: '"Amazing service! Quick, professional and reliable."', author: 'Kiera', sub: 'Verified Google Review' },
+        { text: '"Fantastic service in every way. I would highly recommend. Excellent cleaners and really good admin!"', author: 'Chavi B.', sub: 'Verified Google Review' },
+        { text: '"Worth every penny for amazing deep cleaning!"', author: 'Drake', sub: 'Verified Google Review' },
+    ],
+};
+
 function buildPage(service, area) {
     const title = area.slug === 'london'
         ? `${service.name} London | DS Cleaners`
@@ -287,6 +355,36 @@ function buildPage(service, area) {
                 <span>${f}</span>
               </div>`).join('');
 
+    const reviewPool = REVIEW_POOLS[service.slug] || REVIEW_POOLS['domestic-cleaning'];
+    const star13 = '<svg width="13" height="13" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg>';
+    const stars5 = star13.repeat(5);
+    const reviewsHtml = reviewPool.map(r =>
+        '<div class="review-mini"><div class="review-stars">' + stars5 + '</div><p class="review-text">' + r.text + '</p><div class="review-author">' + r.author + '</div><div class="review-sub">' + r.sub + '</div></div>'
+    ).join('');
+
+    const ogImage = service.heroImg.replace('w=1600', 'w=1200').replace('q=80', 'h=630&fit=crop&q=80');
+
+    const relatedServices = SERVICES.filter(s =>
+        s.slug !== service.slug &&
+        !(s.slug === 'cleaning-services' && area.slug !== 'london')
+    );
+    const relatedLinksHtml = relatedServices.map(s =>
+        `<a href="${BRAND.domain}/landing/${s.slug}-${area.slug}.html" class="rel-svc-link">` +
+        `<span class="rel-svc-name">${s.name}</span>` +
+        `<span class="rel-svc-from">From ${s.rateFrom}</span></a>`
+    ).join('');
+
+    const breadcrumbItems = area.slug === 'london'
+        ? JSON.stringify([
+            { '@type': 'ListItem', position: 1, name: 'Home', item: BRAND.domain },
+            { '@type': 'ListItem', position: 2, name: service.name + ' in London', item: BRAND.domain + '/landing/' + canonicalSlug },
+          ])
+        : JSON.stringify([
+            { '@type': 'ListItem', position: 1, name: 'Home', item: BRAND.domain },
+            { '@type': 'ListItem', position: 2, name: service.name + ' in London', item: BRAND.domain + '/landing/' + service.slug + '-london.html' },
+            { '@type': 'ListItem', position: 3, name: service.name + ' in ' + area.name, item: BRAND.domain + '/landing/' + canonicalSlug },
+          ]);
+
     return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -300,6 +398,9 @@ function buildPage(service, area) {
 <meta property="og:description" content="${metaDesc}"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="${BRAND.domain}/landing/${canonicalSlug}"/>
+<meta property="og:image" content="${ogImage}"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
 <link rel="canonical" href="${BRAND.domain}/landing/${canonicalSlug}"/>
 
 <script type="application/ld+json">
@@ -316,7 +417,25 @@ function buildPage(service, area) {
       "description": "Family-owned professional cleaning company with 15+ years experience in commercial and domestic cleaning across London.",
       "areaServed": "${area.name}",
       "priceRange": "${service.priceRange}",
-      "serviceType": "${service.name}"
+      "serviceType": "${service.name}",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "9",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "${service.name} in ${area.name}",
+      "serviceType": "${service.name}",
+      "provider": {"@type":"LocalBusiness","name":"${BRAND.name}","url":"${BRAND.domain}"},
+      "areaServed": "${area.name}",
+      "description": "${service.description.replace(/"/g, '\\"')}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": ${breadcrumbItems}
     },
     {
       "@type": "FAQPage",
@@ -466,8 +585,13 @@ footer{background:var(--navy);padding:40px 5% 24px;margin-top:80px}
 .footer-bottom{max-width:1160px;margin:0 auto;display:flex;justify-content:space-between;font-size:.75rem;color:rgba(255,255,255,.3);flex-wrap:wrap;gap:6px}
 
 /* RESPONSIVE */
+.rel-svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.rel-svc-link{display:block;background:var(--grey-50);border:1px solid var(--grey-200);border-radius:var(--radius);padding:14px 16px;transition:border-color .2s,box-shadow .2s}
+.rel-svc-link:hover{border-color:var(--blue);box-shadow:var(--shadow)}
+.rel-svc-name{display:block;font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:3px}
+.rel-svc-from{display:block;font-size:.75rem;color:var(--grey-600)}
 @media(max-width:900px){.main{grid-template-columns:1fr}.quote-card{position:static}}
-@media(max-width:640px){.hero-h1{font-size:2.2rem}.features-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}.reviews-strip{grid-template-columns:1fr}.trust-bar-inner{gap:18px}.f-row{grid-template-columns:1fr}}
+@media(max-width:640px){.hero-h1{font-size:2.2rem}.features-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}.reviews-strip{grid-template-columns:1fr}.rel-svcs{grid-template-columns:1fr 1fr}.trust-bar-inner{gap:18px}.f-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -545,10 +669,14 @@ footer{background:var(--navy);padding:40px 5% 24px;margin-top:80px}
       <div class="section-label">What clients say</div>
       <h2 class="section-h2" style="font-size:1.8rem">Trusted by ${area.name} homes &amp; businesses</h2>
       <div class="reviews-strip">
-        <div class="review-mini"><div class="review-stars">${'<svg width="13" height="13" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg>'.repeat(5)}</div><p class="review-text">"Absolutely brilliant service. They cleaned our flat in ${area.short} to a standard we'd never managed ourselves. Highly recommended."</p><div class="review-author">Sarah T.</div><div class="review-sub">${service.name} &middot; ${area.short}</div></div>
-        <div class="review-mini"><div class="review-stars">${'<svg width="13" height="13" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg>'.repeat(5)}</div><p class="review-text">"Reliable, professional and great value. We've been using DS Cleaners for 18 months and wouldn't go anywhere else."</p><div class="review-author">Mark L.</div><div class="review-sub">${service.name} &middot; ${area.short}</div></div>
-        <div class="review-mini"><div class="review-stars">${'<svg width="13" height="13" viewBox="0 0 14 14"><path d="M7 1L8.4 5H13L9.3 7.6L10.7 11.5L7 9L3.3 11.5L4.7 7.6L1 5H5.6L7 1Z" fill="#fcc419"/></svg>'.repeat(5)}</div><p class="review-text">"Used them for our end of tenancy — got the full deposit back. The team were thorough, professional and on time."</p><div class="review-author">Priya M.</div><div class="review-sub">${service.name} &middot; ${area.short}</div></div>
+        ${reviewsHtml}
       </div>
+    </div>
+
+    <div style="margin-top:52px">
+      <div class="section-label">Also available in ${area.name}</div>
+      <h2 class="section-h2" style="font-size:1.8rem">Other services in ${area.name}</h2>
+      <div class="rel-svcs">${relatedLinksHtml}</div>
     </div>
 
     <div style="margin-top:52px">
@@ -612,8 +740,8 @@ footer{background:var(--navy);padding:40px 5% 24px;margin-top:80px}
     <div>
       <div class="footer-links">
         <h4>Areas</h4>
-        <a href="${BRAND.domain}/landing/cleaning-services-south-west-london.html">South West London</a>
-        <a href="${BRAND.domain}/landing/cleaning-services-south-east-london.html">South East London</a>
+        <a href="${BRAND.domain}/landing/domestic-cleaning-south-west-london.html">South West London</a>
+        <a href="${BRAND.domain}/landing/domestic-cleaning-south-east-london.html">South East London</a>
         <a href="${BRAND.domain}/landing/cleaning-services-london.html">London</a>
         <a href="${BRAND.domain}">DS Cleaners Home</a>
       </div>
@@ -637,7 +765,7 @@ footer{background:var(--navy);padding:40px 5% 24px;margin-top:80px}
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2024 DS Cleaners. All rights reserved.</span>
+    <span>&copy; 2026 DS Cleaners. All rights reserved.</span>
     <span>${service.name} &middot; ${area.name}</span>
   </div>
 </footer>
@@ -700,8 +828,8 @@ console.log(`\n✅ Generated ${count} landing pages`);
 const BLOG_POSTS = [
     {
         slug: 'end-of-tenancy-cleaning-checklist-london',
-        title: 'End of Tenancy Cleaning Checklist London (2025) — Room by Room',
-        metaTitle: 'End of Tenancy Cleaning Checklist London 2025 | DS Cleaners',
+        title: 'End of Tenancy Cleaning Checklist London (2026) — Room by Room',
+        metaTitle: 'End of Tenancy Cleaning Checklist London 2026 | DS Cleaners',
         metaDesc: 'A complete room-by-room end of tenancy cleaning checklist for London renters. Use it yourself or know exactly what to expect from a professional clean.',
         datePublished: '2025-01-15',
         category: 'End of Tenancy',
@@ -1056,8 +1184,8 @@ const BLOG_POSTS = [
     },
     {
         slug: 'spring-cleaning-tips-london',
-        title: 'Spring Cleaning Tips for London Homes (2025)',
-        metaTitle: 'Spring Cleaning Tips for London Homes 2025 | DS Cleaners',
+        title: 'Spring Cleaning Tips for London Homes (2026)',
+        metaTitle: 'Spring Cleaning Tips for London Homes 2026 | DS Cleaners',
         metaDesc: 'A practical spring cleaning guide for London flats and houses — where to start, what gets missed, and when it\'s worth calling in professionals.',
         datePublished: '2025-04-14',
         category: 'Domestic Cleaning',
@@ -1411,7 +1539,7 @@ footer{background:var(--navy);padding:40px 5% 24px;margin-top:0}
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2024 DS Cleaners. All rights reserved.</span>
+    <span>&copy; 2026 DS Cleaners. All rights reserved.</span>
     <span>${post.category} &middot; DS Cleaners Blog</span>
   </div>
 </footer>
@@ -1529,7 +1657,7 @@ footer{background:var(--navy);padding:32px 5% 20px}
 </div>
 <footer>
   <div class="footer-bottom">
-    <span>&copy; 2024 DS Cleaners. All rights reserved.</span>
+    <span>&copy; 2026 DS Cleaners. All rights reserved.</span>
     <a href="${BRAND.domain}" style="color:rgba(255,255,255,.3)">DS Cleaners Home</a>
   </div>
 </footer>
